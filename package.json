@@ -1,7 +1,7 @@
 {
-  "name": "node-handlebars-boilerplate",
+  "name": "group-project-2",
   "version": "1.0.0",
-  "description": "group-project-2",
+  "description": "Project 2 Starter",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
