@@ -4,6 +4,8 @@ var $exampleDescription = $("#example-description");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
 
+var $searchLocation = $("#locationInput");
+
 var fName = $("#fName");
 var lName = $("#lName");
 var email = $("#inputEmail");
@@ -12,7 +14,6 @@ var address = $("#inputAddress");
 var city = $("#inputCity");
 var state = $("#inputState");
 var zip = $("#inputZip");
-
 
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -107,3 +108,5 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+$searchLocation.on("click", "#searchLocation", searchLocationFunc);
