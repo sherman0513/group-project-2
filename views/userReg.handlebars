@@ -1,0 +1,84 @@
+<section class="mainSection">
+  <nav class="navbar navbar-expand-lg navbar-dark mainNavBar" id="nav">
+    <!-- <a class="navbar-brand titleNav" id="navTitle" href="#">Take A Hike</a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+      aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Reviews</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+      <ul id="signInLink" class="navbar-nav mr-auto">
+        <!-- dynamically generated sign in link or user menu -->
+      </ul>
+    </div>
+  </nav>
+
+  <form>
+    <div class="form-row" id="hiker-form" action="POST">
+      <div class="col">
+        <input type="text" id="fName" class="form-control" placeholder="First name">
+      </div>
+      <div class="col">
+        <input type="text" id="lName" class="form-control" placeholder="Last name">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail">Email</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword">Password</label>
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputAddress">Address</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputCity">City</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputState">State</label>
+        <select id="inputState" class="form-control">
+          <option selected>Choose...</option>
+          <option>...</option>
+        </select>
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputZip">Zip</label>
+        <input type="text" class="form-control" id="inputZip">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <label class="form-check-label" for="gridCheck">
+          Check me out
+        </label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" id="userRegButton">Sign in</button>
+  </form>
+
+  <div class="card-footer text-white footer">
+    <p class="footer-text"> &copy; 2019 by Group JMAC. All rights reserved. </p>
+  </div>
+  <script src="../public/assets/js/hikers.js"></script>
+  {{!-- <script src="../public/assets/js/index.js"></script> --}}

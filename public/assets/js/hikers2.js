@@ -4,6 +4,30 @@ var $exampleDescription = $("#example-description");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
 
+var fName = $("#fName");
+var lName = $("#lName");
+var email = $("#inputEmail");
+var password = $("#inputPassword");
+var address = $("#inputAddress");
+var city = $("#inputCity");
+var state = $("#inputState");
+var zip = $("#inputZip");
+
+// // Calling the upserthiker function and passing in the value of the name input
+// upsertHiker({
+//   fname: fName.val().trim(),
+//   lname: lName.val().trim(),
+//   address: address.val().trim(),
+//   city: city.val().trim(),
+//   state: state.val().trim(),
+//   zip: zip.val().trim(),
+//   email: email.val().trim(),
+//   longit: 0,
+//   latit: 0
+// });
+
+
+
 // The API object contains methods for each kind of request we'll make
 var API = {
   saveExample: function(example) {

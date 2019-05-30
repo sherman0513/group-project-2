@@ -13,7 +13,7 @@ module.exports = function(sequelize, DataTypes) {
       validate: { len: [1] }
     },
 
-    gender: DataTypes.STRING,
+    // gender: DataTypes.STRING,
     address: DataTypes.STRING,
     city: DataTypes.STRING,
     state: DataTypes.STRING,
@@ -27,11 +27,11 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       validate: { len: [5] }
     },
-    c1: DataTypes.BOOLEAN,
-    c2: DataTypes.BOOLEAN,
-    c3: DataTypes.BOOLEAN,
-    c4: DataTypes.BOOLEAN,
-    c5: DataTypes.BOOLEAN,
+    // c1: DataTypes.BOOLEAN,
+    // c2: DataTypes.BOOLEAN,
+    // c3: DataTypes.BOOLEAN,
+    // c4: DataTypes.BOOLEAN,
+    // c5: DataTypes.BOOLEAN,
     longit: DataTypes.DOUBLE,
     latit: DataTypes.DOUBLE
   });
