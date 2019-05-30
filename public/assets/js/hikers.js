@@ -3,7 +3,7 @@ $(document).ready(function() {
   var fName = $("#fName");
   var lName = $("#lName");
   var email = $("#inputEmail");
-  var password = $("#inputPassword");
+  // var password = $("#inputPassword");
   var address = $("#inputAddress");
   var city = $("#inputCity");
   var state = $("#inputState");
@@ -53,26 +53,26 @@ $(document).ready(function() {
   }
 
   // Function for creating a new list row for hikers
-  function createHikerRow(hikerData) {
-    var newTr = $("<tr>");
-    newTr.data("hiker", hikerData);
-    newTr.append("<td>" + hikerData.name + "</td>");
-    if (hikerData.Posts) {
-      newTr.append("<td> " + hikerData.Posts.length + "</td>");
-    } else {
-      newTr.append("<td>0</td>");
-    }
-    newTr.append(
-      "<td><a href='/blog?hiker_id=" + hikerData.id + "'>Go to Posts</a></td>"
-    );
-    newTr.append(
-      "<td><a href='/cms?hiker_id=" + hikerData.id + "'>Create a Post</a></td>"
-    );
-    newTr.append(
-      "<td><a style='cursor:pointer;color:red' class='delete-hiker'>Delete hiker</a></td>"
-    );
-    return newTr;
-  }
+  // function createHikerRow(hikerData) {
+  //   var newTr = $("<tr>");
+  //   newTr.data("hiker", hikerData);
+  //   newTr.append("<td>" + hikerData.name + "</td>");
+  //   if (hikerData.Posts) {
+  //     newTr.append("<td> " + hikerData.Posts.length + "</td>");
+  //   } else {
+  //     newTr.append("<td>0</td>");
+  //   }
+  //   newTr.append(
+  //     "<td><a href='/blog?hiker_id=" + hikerData.id + "'>Go to Posts</a></td>"
+  //   );
+  //   newTr.append(
+  //     "<td><a href='/cms?hiker_id=" + hikerData.id + "'>Create a Post</a></td>"
+  //   );
+  //   newTr.append(
+  //     "<td><a style='cursor:pointer;color:red' class='delete-hiker'>Delete hiker</a></td>"
+  //   );
+  //   return newTr;
+  // }
 
   //   Function for retrieving hikers and getting them ready to be rendered to the page
   // function getHiker() {

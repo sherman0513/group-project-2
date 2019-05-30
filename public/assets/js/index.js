@@ -6,14 +6,14 @@ var $exampleList = $("#example-list");
 
 var $searchLocation = $("#locationInput");
 
-var fName = $("#fName");
-var lName = $("#lName");
-var email = $("#inputEmail");
-var password = $("#inputPassword");
-var address = $("#inputAddress");
-var city = $("#inputCity");
-var state = $("#inputState");
-var zip = $("#inputZip");
+// var fName = $("#fName");
+// var lName = $("#lName");
+// var email = $("#inputEmail");
+// var password = $("#inputPassword");
+// var address = $("#inputAddress");
+// var city = $("#inputCity");
+// var state = $("#inputState");
+// var zip = $("#inputZip");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
