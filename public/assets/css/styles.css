@@ -17,7 +17,7 @@ body{
 #nav {
   position: relative;
   height:9%;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 #title{
@@ -78,13 +78,6 @@ right: 3%;
   z-index: 99;
   text-align: center;
   }
-
-/* .title{
-  margin-top: 10%;
-  /* color: rgb(218,93,52); */
-  font-size: 450%;
-  /* text-shadow: 2px 2px white; */
-} */
 
 .containerSearch{
   height: 40%;
@@ -232,9 +225,10 @@ h5 {
 .containerForm{
   position: relative;
   background-color: rgba(255, 255, 255, 0.781);
-  height: 100%;
-  width: 50%;
+  height: 110%;
+  width: 60%;
   border: 1px solid rgba(207, 204, 204, 0.548);
+  margin-bottom: 70px;
 }
 
 .divider{
@@ -242,25 +236,38 @@ h5 {
   background-color: #3f695b;
 }
 
-#signInForm{
- padding: 10%;
+#signInForm {
+ padding: 4% 6% 4% 6%;
 }
 
+#user-pass {
+ width: 100%;
+}
 #btnDiv{
   position: relative;
   padding-right: 10%;
 }
 
 #add{
-  padding: 2% 10% 5% 10%;
+  padding: 1% 5% 1% 5%;
 }
 
 #textSign{
-  padding: 10% 10% 2% 10%;
+  margin: 0;
+  padding: 1% 1% 1% 1%;
+  text-align: center;
 }
 
 #submitSignUp{
-  margin: 0;
+  margin: 0 0 5px 0;
+  position: absolute;
+  right: 16px;
+}
+
+#submitSignIn{
+  margin: 0 0 5px 0;
+  position: absolute;
+  right: 16px;
 }
 
 
