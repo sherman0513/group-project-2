@@ -6,33 +6,44 @@ body{
   background-color: #a6c5a5;
   background-image: url("../images/action-adventure-alps-238622.jpg");
   /* background-position-y: bottom; */
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
   background-size: 100%;
 }
 
 *{
   font-family: 'Montserrat', sans-serif;
 }
+
 #nav {
   position: relative;
-  height:12%;
+  height:9%;
   margin-bottom: 50px;
 }
 
-#navTitle {
+#title{
   font-family: 'Tillana', cursive;
+  /* font-family: 'Merienda One', cursive; */
+  font-size: 8vh;
+  font-weight: bolder;
+  text-align: center;
+  margin: 0;
+  text-shadow: 2px 2px #cbd6cf;
 
-  
+}
+
+/* #navTitle {
+  font-family: 'Tillana', cursive;
   font-size: 50px;
   position: absolute;
   left: 575px;
 
 
-}
+} */
 
 #navbarColor01 {
   position: absolute;
-  width: 90%;
+  width: 95%;
+  /* background-color: #3f695b; */
 }
 .clearfix::after{
   content: "";
@@ -46,8 +57,10 @@ body{
 }
 
 .mainNavBar, #footer{
-  height: 7vh;
+  /* height: 7vh; */
+  padding: 8px;
   z-index: 10;
+  background-color: hsl(159, 22%, 25%);
 }
 
 #signInLink{
@@ -66,12 +79,12 @@ right: 3%;
   text-align: center;
   }
 
-.title{
+/* .title{
   margin-top: 10%;
   /* color: rgb(218,93,52); */
   font-size: 450%;
   /* text-shadow: 2px 2px white; */
-}
+} */
 
 .containerSearch{
   height: 40%;
@@ -93,7 +106,26 @@ right: 3%;
   z-index: 99;
 } 
 
+.hikeSearch{
+  position: absolute;
+  width:40%;
+  /* top: 60%; */
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  margin-top: 10%;
+}
 
+#locationInput {
+  position: relative;
+  width: 85%;
+}
+#searchLocation {
+  position: absolute;
+ right: 0;
+ margin-left: 5px;
+
+}
 
 .optionSearch{
   position: absolute;
@@ -111,12 +143,13 @@ right: 3%;
   width: 100%;
   clear: both; 
   margin-top: 10px;
-  padding: 10px;
+  padding: 7px;
 }
 
 .footer-text{
   text-align: center;
   font-size: 90%;
+  margin: 4px;
 }
 
 #hikingDiv{   
@@ -180,10 +213,10 @@ h5 {
  background-color: rgba(207, 204, 204, 0.548);
 }
 
-.titleNav{
+/* .titleNav{
   position: absolute;
   left: 47%;
-}
+} */
 
 .mainDiv{
   background-image: url("../images/adventure-calm-clouds-414171.jpg");
@@ -206,7 +239,7 @@ h5 {
 
 .divider{
   width: 70%;
-  background-color: #da5d34;
+  background-color: #3f695b;
 }
 
 #signInForm{
@@ -236,7 +269,7 @@ h5 {
 }
 
 .modal-body{
-  box-shadow: #E95420;
+  background-color: #3f695b;
 }
 
 @media screen and (max-width: 991px) {
@@ -246,7 +279,7 @@ h5 {
 
   .navbar-dark .navbar-nav .nav-link{
       font-weight: bold;
-      color: #E95420;
+      background-color: #3f695b;
   }
 
   #signInLink button{
