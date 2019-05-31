@@ -32,7 +32,7 @@ section {
 
 .heading::after{
     content: "";
-    width: 10rem;
+    width: 40rem;
     height: .8rem;
     background-color: #45e19f;
     position: absolute;
@@ -64,8 +64,6 @@ section {
     width: 100%;
     height: 26rem;
     object-fit: cover;
-    /*-webkit-clip-path: polygon(0 0, 100% 0, 100% 78%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 78%, 0% 100%);*/
 }
 
 .profile-img {
@@ -98,16 +96,6 @@ section {
     color: #333;       
 }
 
-.card .btn {
-    padding: 1rem 2.5rem;
-    background-color: #445ae3;
-    border-radius: 2rem;
-    margin: 1rem 0;
-    text-transform: uppercase;
-    color: #eee;
-    font-size: 1.4rem;
-}
-
 .social-media {
     width: 100%;
     list-style: none;
@@ -123,26 +111,23 @@ section {
     transition: color .5s;
 }
 
-.fa-facebook-square {
+.fa-linkedin {
     color: #3b5999;
 }
 
-.fa-twitter-square {
-    color: #55acee;
+.fa-github-square {
+    color: black;
 }
 
-.fa-instagram {
-    color: #e6683c;
+.fa-envelope {
+    color: black;
 } 
 
-.fa-google-plus-square {
-    color: #dd4b39;
-}
 
-.fa-facebook-square:hover,
-.fa-twitter-square:hover,
-.fa-instagram:hover,
-.fa-google-plus-square:hover {
+.fa-linkedin:hover,
+.fa-github-square:hover,
+.fa-envelope:hover
+{
     color: #45e19f;
 }
 
