@@ -1,6 +1,7 @@
 var lat = 33.44838;
 var long = -112.07404;
 var distance = $("#search-min-lng");
+// var radius = $("#search-max-dist")
 // var location =
 
 var queryURL =
@@ -11,7 +12,6 @@ var queryURL =
   "&maxDistance=" +
   distance +
   "&key=200478105-d8aad42d0f96cc437e18f84fec7edbbc";
-// 33.44838  -112.07404 10
 
 $.ajax({
   url: queryURL,
@@ -23,3 +23,4 @@ $.ajax({
     examples: data
   });
 });
+
