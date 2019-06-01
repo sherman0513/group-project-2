@@ -120,6 +120,7 @@ console.log("LINKED");
 
 $(document).ready(function() {
   $searchBtn.on("click", function() {
+    trailSearch();
     var myNumber = 0;
     console.log("CLICKED FINALLY HOPEFULLY");
     myNumber += 1;
