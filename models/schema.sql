@@ -1,0 +1,4 @@
+DROP DATABASE IF EXISTS hikingTrekdb;
+CREATE DATABASE  hikingTrekdb;
+
+
