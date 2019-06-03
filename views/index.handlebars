@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home
+          <a href="/">Home
             <span class="sr-only">(current)</span>
           </a>
         </li>
@@ -66,44 +66,46 @@
   </div>
   </div> --}}
 
-  <form class="hikeSearch">
-    <div class="form">
-      <div class="col-auto">
-        <div class="row">
-          {{!-- <div class="col"> --}}
-          <input type="number" step="any" class="form-control mb-2" id="search-min-lng"
-            placeholder="Min Trail Length (in miles)">
-        </div>
-        <div class="row">
-          {{!-- <div class="col"> --}}
-          <input type="number" step="any" class="form-control mb-2" id="search-max-dist"
-            placeholder="Max Search Radius (in miles)">
-        </div>
-        <div class="row">
-          {{!-- <div class="col"> --}}
-          <select class="form-control mb-2" id="search-diff">
-            <option value="green">Easy</option>
-            <option value="greenBlue">Somewhat Easy</option>
-            <option value="blue">Intermediate</option>
-            <option value="blueBlack">Somewhat Hard</option>
-            <option value="black">Hard</option>
-            <option value="dblack">Extremely Hard</option>
-          </select>
-        </div>
-        <div class="row">
-          <input type="text" class="form-control mb-2" id="locationInput" placeholder="Location">
-          <div class="invalid-feedback">
-            Please enter a location.
-          </div>
-          {{!-- <button type="submit" class="btn btn-primary" id="searchLocation">Search</button> --}}
-          <a href="/trails" class="btn btn-primary" id="searchLocation" role="button" aria-pressed="true">Search</a>
-          <br>
-          {{!-- <button id="test"></button> --}}
-        </div>
-      </div>
-    </div>
-  </form>
-</section>
+
+
+
+<form class="hikeSearch" method="get">
+   <div class="form">
+     <div class="col-auto">
+       <div class="row">
+         {{!-- <div class="col"> --}}
+         <input type="number" step="any" class="form-control mb-2" id="search-min-lng"
+           placeholder="Min Trail Length (in miles)">
+       </div>
+       <div class="row">
+         {{!-- <div class="col"> --}}
+         <input type="number" step="any" class="form-control mb-2" id="search-max-dist"
+           placeholder="Max Search Radius (in miles)">
+       </div>
+       <div class="row">
+         {{!-- <div class="col"> --}}
+         <select class="form-control mb-2" id="search-diff">
+           <option value="green">Easy</option>
+           <option value="greenBlue">Somewhat Easy</option>
+           <option value="blue">Intermediate</option>
+           <option value="blueBlack">Somewhat Hard</option>
+           <option value="black">Hard</option>
+           <option value="dblack">Extremely Hard</option>
+         </select>
+       </div>
+       <div class="row">
+         <input type="text" class="form-control mb-2" id="locationInput" placeholder="Location">
+         <div class="invalid-feedback">
+           Please enter a location.
+         </div>
+         {{!-- <button type="submit" class="btn btn-primary" id="searchLocation">Search</button> --}}
+         <a href="/trails" class="btn btn-primary" id="searchLocation" role="button" aria-pressed="true">Search</a>
+         <br>
+         {{!-- <button id="test"></button> --}}
+       </div>
+     </div>
+   </div>
+ </form>
 
 
 <div class="card-footer text-white footer" id="footer">
