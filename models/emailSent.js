@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var EmailSent = sequelize.define("emailSent", {
+  var EmailSent = sequelize.define("EmailSent", {
     subject: DataTypes.STRING,
     recipient: DataTypes.STRING,
     from: DataTypes.STRING,

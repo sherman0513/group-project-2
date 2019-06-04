@@ -118,6 +118,14 @@ module.exports = function(app) {
     res.render("userReg");
   });
  
+  app.get("/aboutUs", function(req, res) {
+    res.render("aboutUs");
+  });
+ 
+  app.get("/tips", function(req, res) {
+    res.render("tips");
+  });
+ 
   // app.post("/trails", function(req, res) {
   //   res.render("trails");
   // });
