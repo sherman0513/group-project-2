@@ -5,74 +5,129 @@
 // var keys = require("../keys.js");
 // var request = require("request");
 // // var path = require("path");
-// // var db = require("../models");
-
-// // var axios = require("axios");
-
-// // var googleMapsGeoKey = keys.google.id;
-// var googleMapsGeoKey = "200478105-d8aad42d0f96cc437e18f84fec7edbbc";
-
-// // var trailsKey = keys.trail.id;
-// var trailsKey = "AIzaSyBhQzp3YANF-ovfShlRlDcLCCxiJB_Nntg";
-
-// Routes
-// =============================================================
-module.exports = function (app) {
-  // main route
-  app.get("/", function (req, res) {
-    res.render("index");
-  });
-
-  // user sign-up (create account) route
-  app.get("/userReg", function (req, res) {
-    console.log("Your user information has been received!");
-    res.render("userReg");
-  });
-
-  app.get("/api/users", function (req, res) {
-    res.render("example");
-  });
-
-
-  app.get("/trails", function (req, res) {
-    console.log("Trails handlebar page rendered!");
-    res.render("trails");
-  });
-  
-};
-
-// / Basic Node application for requesting data from the OMDB website via axios
-// Here we incorporate the "axios" npm package
+var db = require("../models");
 var axios = require("axios");
-// var request = require("request");
-var googleMapsGeoKey = "AIzaSyAcWi7e4cYLA0SxYDy4qM4TI4itINyOIek";
 
-// var request = require("request-promise");
+var googleMapsGeoKey = "AIzaSyAcWi7e4cYLA0SxYDy4qM4TI4itINyOIek";
+var trailsKey = "200478741-5d75b3d8fc9d96ba1f9d4da1ddd5daf7";
+
 var address = "85295";
+var searchRadius = 100;
+var searchLength = 10;
 var latlngUrl =
   "https://maps.googleapis.com/maps/api/geocode/json?address=" +
   address +
   "&key=" +
   googleMapsGeoKey;
 
-/* request.get(latlngUrl).on("response", function(response) {
- console.log(response.statusCode); // 200
+var lat;
+var lng;
 
- Object.keys(response);
+module.exports = function(app) {
+  // Load index page
+  // app.get("/", function(req, res) {
+  //   db.Example.findAll({}).then(function(dbExamples) {
+  //     res.render("index", {
+  //       msg: "Welcome!",
+  //       examples: dbExamples
+  //     });
+  //   });
+  // });
 
- console.log(Object.keys(response)); // 'image/png'
-}); */
+  //Render list of users on UserList handlebar page
+  app.get("/api/users", function(req, res) {
+    db.Hiker.findAll({}).then(function(dbHikers) {
+      res.render("UserList", {
+        msg: "Welcome!",
+        examples: dbHikers
+      });
+    });  
+   
+  });
 
-// /* // We then run the request with axios module on a URL with a JSON
-axios.get(latlngUrl).then(function (response) {
+  // // Load example page and pass in an example by id
+  // app.get("/example/:id", function (req, res) {
+  //   db.Example.findOne({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   }).then(function (
+  //     dbExample
+  //   ) {
+  //     res.render("example", {
+  //       example: dbExample
+  //     });
+  //   });
+  // });
 
-  var myresult = JSON.stringify(response.data.results, null, 2);
+  app.get("/trails", function(req, res) {
 
-  console.log(myresult);
-});
-
-
-
-
-
-
+    axios
+      .get(latlngUrl)
+      .then(function(response) {
+      //var myresult = JSON.stringify(response.data.results[0].geometry, null,2);
+ 
+        lat = response.data.results[0].geometry.location.lat;
+        lng = response.data.results[0].geometry.location.lng;
+ 
+        var trailUrl =
+        "https://www.hikingproject.com/data/get-trails?lat=" +
+        lat +
+        "&lon=" +
+        lng +
+        "&maxDistance=" +
+        searchRadius +
+        "&minLength=" +
+        searchLength +
+        "&key=" +
+        trailsKey;
+ 
+        axios.get(trailUrl).then(function(response) {
+        // console.log(response.data.trails);
+ 
+          var data = {};
+          data = response.data.trails;
+          //data.stringify = JSON.stringify(data);
+          console.log(data);
+          console.log("renderME");
+          res.render("trails", {trails: data });
+        });
+ 
+      //console.log(response.data.results[0].geometry.location.lat);
+      //console.log(response.data.results[0].geometry.location.lng);
+      })
+ 
+      .catch(function(error) {
+      // handle error
+        res.json(error);
+      })
+      .finally(function() {
+      // always executed
+      });
+ 
+ 
+ 
+ 
+  });
+ 
+  app.get("/", function(req, res) {
+    res.render("index");
+  });
+ 
+  app.get("/userReg", function(req, res) {
+    res.render("userReg");
+  });
+ 
+  // app.post("/trails", function(req, res) {
+  //   res.render("trails");
+  // });
+ 
+  /*   app.get("/trails", function(req, res) {
+    res.render("trails");
+  }); */
+ 
+  // Render 404 page for any unmatched routes
+  app.get("*", function(req, res) {
+    res.render("404");
+  });
+};

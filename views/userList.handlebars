@@ -1,0 +1,34 @@
+<ul>
+    {{#each this}}
+
+
+    <div class="card border border-success ready" id={{ this.id}}>
+        <div class="card-body">
+            <p><span> ID:</span> {{ this.id}}</p>
+            <p><span> Name:</span> {{ this.name}}</p>
+            {{!-- <p><span> Summary:</span> {{ this.summary}}</p>
+            <p><span> Difficulty:</span> {{ this.difficulty}}</p>
+            <p><span> Location:</span> {{ this.location}}</p> --}}
+
+            <button type="button" class="btn btn-info" data-myval={{ this.id}}>Save This Hike</button>
+
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="modal-wrapper hidden">
+        <div class="container">
+            <div class="header">
+                <h2>Modal header</h2>
+                <img src="{image src}" />
+                <p>{caption text}</p>
+            </div>
+        </div>
+    </div>
+
+
+    {{/each}}
+
+</ul>
