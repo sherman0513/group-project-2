@@ -16,6 +16,14 @@ app.use(
 app.use(express.json());
 app.use(express.static("public"));
 
+// assemble is a descendant of `templates`
+// var app = assemble();
+// app.engine('hbs', require('engine-handlebars'));
+
+// // engines like handlebars can handle a helper name with dashes
+// app.helper('link-to', require('helper-link-to'));
+
+
 // Handlebars
 app.engine(
   "handlebars",

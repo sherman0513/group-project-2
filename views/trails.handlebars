@@ -1,27 +1,30 @@
-<ul id= "trailBg">
+<ul id="trailBg">
 
- {{#each trails}}
+   {{#each trails}}
 
-    <div class="card border border-success ready" id={{ this.id}}>
-       <div class="card-body">
+   <div class="card border border-success ready" id={{ this.id}}>
+      <div class="card-body">
 
 
-          <img src={{imgSmallMed}} alt="Smiley face" width="200" height="200">
+         <img src={{imgSmallMed}} alt="Smiley face" width="200" height="200">
 
-            <h2>{{{ name}}}</h2>
-           <p>{{summary}}</p>
-           <p><span> Difficulty:</span> {{ difficulty}}</p>
-           <p><span> Location:</span> {{location}}</p>
+         <h2>{{{name}}}</h2>
+         <p>{{summary}}</p>
+         <p><span> Difficulty:</span> {{difficulty}}</p>
+         <a href="{{url}}">More Info </a>
+         <p><span> Location:</span> {{location}}</p>
+         {{!-- <a href="{{link 'aboutUs'}}">About</a> --}}
 
-           <button type="button" class="btn btn-info" data-myval={{ this.id}}>Save This Hike</button>
 
-       </div>
+         <button type="button" class="btn btn-info" data-myval={{ this.id}}>Save This Hike</button>
+
+      </div>
 
    </div>
 
-   <br> 
+   <br>
 
-  {{!-- <div class="modal-wrapper hidden">
+   {{!-- <div class="modal-wrapper hidden">
     <div class="card border border-success ready" id={{ this.id}}>
        <div class="trail-card-body">
 
@@ -44,17 +47,30 @@
    {{/each}}
 </ul>
 
-<script>
-    $('img').on("click", function () {
-        var imageSrc = this.attr('src');
 
-        $('.modal-wrapper .header img').attr("src",imageSrc);
+{{!-- <script>
+   Handlebars.registerHelper('link', function (text, url) {
+      text = Handlebars.Utils.escapeExpression(text);
+      url = Handlebars.Utils.escapeExpression(url);
+
+      var result = '<a href="' + url + '">' + text + '</a>';
+
+      return new Handlebars.SafeString(result);
+   });
+
+</script> --}}
+
+{{!-- <script>
+   $('').on("click", function () {
+      var imageSrc = this.attr('src');
+
+      $('.modal-wrapper .header img').attr("src", imageSrc);
 
 
-   $('.modal-wrapper').toggle();
+      $('.modal-wrapper').toggle();
 
-});
-</script> 
+   }); 
+</script>  --}}
 
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

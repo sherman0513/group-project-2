@@ -29,7 +29,6 @@ module.exports = function(app) {
       res.json(dbHiker);
     });
   });
-  
   app.post("/api/mike", function(req, res) {
     console.log("i'm in post");
     db.Hiker.create(req.body).then(function(dbHiker) {
@@ -66,7 +65,7 @@ module.exports = function(app) {
       longit: req.body.longit,
       latit: req.body.latit,
       conditionDetails: req.body.conditionDetails,
-      conditionDate: req.body.conditionDate,
+      conditionStat: req.body.conditionStat,
       searchedDate: req.body.searchedDate
     })
       .then(function(dbSearchFav) {
