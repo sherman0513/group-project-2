@@ -31,7 +31,7 @@ module.exports = function(app) {
 // passport routes for htmlroutes for user authentication
 var path = require("path");
 
-var isAuthenticated = require("../confid/middleware/isAuthenticate");
+var isAuthenticated = require("../config/middleware/isAuthenticate.js");
 
 module.exports = (app) => {
   app.get("/", (req, res) => {
