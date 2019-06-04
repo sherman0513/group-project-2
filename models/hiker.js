@@ -1,52 +1,53 @@
 /* eslint-disable linebreak-style */
 module.exports = function(sequelize, DataTypes) {
-  var hiker = sequelize.define("hiker", {
-    fname: {
+  var Hiker = sequelize.define("Hiker", {
+    fName: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: { len: [1] }
     },
 
-    lname: {
+    lName: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: { len: [1] }
     },
 
-    gender: DataTypes.STRING,
+    // gender: DataTypes.STRING,
     address: DataTypes.STRING,
     city: DataTypes.STRING,
     state: DataTypes.STRING,
     zip: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: { len: [5] }
     },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: { len: [5] }
-    },
-    c1: DataTypes.BOOLEAN,
-    c2: DataTypes.BOOLEAN,
-    c3: DataTypes.BOOLEAN,
-    c4: DataTypes.BOOLEAN,
-    c5: DataTypes.BOOLEAN,
-    longit: DataTypes.DOUBLE,
-    latit: DataTypes.DOUBLE
+    }
+    // c1: DataTypes.BOOLEAN,
+    // c2: DataTypes.BOOLEAN,
+    // c3: DataTypes.BOOLEAN,
+    // c4: DataTypes.BOOLEAN,
+    // c5: DataTypes.BOOLEAN,
+
+    // longit: DataTypes.DOUBLE,
+    // latit: DataTypes.DOUBLE
   });
 
-  hiker.associate = function(models) {
-    hiker.hasMany(models.searchFav, {
+  Hiker.associate = function(models) {
+    Hiker.hasMany(models.SearchFav, {
       onDelete: "cascade"
     });
   };
 
-  hiker.associate = function(models) {
-    hiker.hasMany(models.emailSent, {
+  Hiker.associate = function(models) {
+    Hiker.hasMany(models.EmailSent, {
       onDelete: "cascade"
     });
   };
 
-  return hiker;
+  return Hiker;
 };

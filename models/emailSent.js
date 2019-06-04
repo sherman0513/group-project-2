@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var emailSent = sequelize.define("emailSent", {
+  var EmailSent = sequelize.define("emailSent", {
     subject: DataTypes.STRING,
     recipient: DataTypes.STRING,
     from: DataTypes.STRING,
@@ -7,13 +7,13 @@ module.exports = function(sequelize, DataTypes) {
     sentdt: DataTypes.DATE
   });
 
-  emailSent.associate = function(models) {
-    emailSent.belongsTo(models.hiker, {
+  EmailSent.associate = function(models) {
+    EmailSent.belongsTo(models.Hiker, {
       foreignKey: {
-        allowNull: false
+        allowNull: true
       }
     });
   };
 
-  return emailSent;
+  return EmailSent;
 };
