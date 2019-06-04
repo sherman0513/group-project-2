@@ -17,13 +17,13 @@ module.exports = function(sequelize, DataTypes) {
     searchedDate: DataTypes.DATE
   });
 
-  // SearchFav.associate = function(models) {
-  //   SearchFav.belongsTo(models.Hiker, {
-  //     foreignKey: {
-  //       allowNull: true
-  //     }
-  //   });
-  // };
+  SearchFav.associate = function(models) {
+    SearchFav.belongsTo(models.Hiker, {
+      foreignKey: {
+        allowNull: true
+      }
+    });
+  };
 
   return SearchFav;
 };

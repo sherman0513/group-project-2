@@ -37,17 +37,17 @@ module.exports = function(sequelize, DataTypes) {
     // latit: DataTypes.DOUBLE
   });
 
-  // Hiker.associate = function(models) {
-  //   Hiker.hasMany(models.SearchFav, {
-  //     onDelete: "cascade"
-  //   });
-  // };
+  Hiker.associate = function(models) {
+    Hiker.hasMany(models.SearchFav, {
+      onDelete: "cascade"
+    });
+  };
 
-  // Hiker.associate = function(models) {
-  //   Hiker.hasMany(models.EmailSent, {
-  //     onDelete: "cascade"
-  //   });
-  // };
+  Hiker.associate = function(models) {
+    Hiker.hasMany(models.EmailSent, {
+      onDelete: "cascade"
+    });
+  };
 
   return Hiker;
 };

@@ -29,6 +29,13 @@ module.exports = function(app) {
       res.json(dbHiker);
     });
   });
+  
+  app.post("/api/mike", function(req, res) {
+    console.log("i'm in post");
+    db.Hiker.create(req.body).then(function(dbHiker) {
+      res.json(dbHiker);
+    });
+  });
 
   // Delete a user by id
   app.delete("/api/users/:id", function(req, res) {
@@ -44,10 +51,40 @@ module.exports = function(app) {
     });
   });
 
-  // Create a new favorite
+  // post route saving the parameters of an activity to the database
   app.post("/api/favehikes", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+    db.SearchFav.create({
+      trailName: req.body.trailName,
+      type: req.body.type,
+      summary: req.body.summary,
+      difficulty: req.body.difficulty,
+      stars: req.body.stars,
+      location: req.bidy.location,
+      url: req.body.url,
+      image: req.body.image,
+      length: req.body.length,
+      longit: req.body.longit,
+      latit: req.body.latit,
+      conditionDetails: req.body.conditionDetails,
+      conditionDate: req.body.conditionDate,
+      searchedDate: req.body.searchedDate
+    })
+      .then(function(dbSearchFav) {
+        res.json(dbSearchFav);
+      })
+      .catch(function(err) {
+        res.send(err);
+      });
+  });
+
+  // delete route to remove a saved activity from the database (will NOT delete the saved search it is associated with)
+  app.delete("/api/activity", function(req, res) {
+    db.SearchFav.destroy({
+      where: {
+        id: req.body.id
+      }
+    }).then(function(dbActivity) {
+      res.json(dbActivity);
     });
   });
 };

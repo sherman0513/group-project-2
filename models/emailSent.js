@@ -7,13 +7,13 @@ module.exports = function(sequelize, DataTypes) {
     sentdt: DataTypes.DATE
   });
 
-  // EmailSent.associate = function(models) {
-  //   EmailSent.belongsTo(models.Hiker, {
-  //     foreignKey: {
-  //       allowNull: true
-  //     }
-  //   });
-  // };
+  EmailSent.associate = function(models) {
+    EmailSent.belongsTo(models.Hiker, {
+      foreignKey: {
+        allowNull: true
+      }
+    });
+  };
 
   return EmailSent;
 };
