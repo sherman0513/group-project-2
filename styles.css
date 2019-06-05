@@ -27,7 +27,7 @@ section {
     margin-bottom: 4rem;
     text-align: center;
     color: #333;
-    position: static;
+    position: relative;
     font-family: "tillana", cursive;
     background-color: lightblue;
     width: 700px;
@@ -143,6 +143,21 @@ section {
 }
 
 p {
-    font-size: 2rem;
-    font-family: "tillana", cursive;
+    font-size: 1.9rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.tip-wrapper {
+
+}
+
+img {
+    margin: 20px;
+    float: left;
+    width:170px;
+    height:170px;
+}
+
+.two {
+    float: right;
 }
