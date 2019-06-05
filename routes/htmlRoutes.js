@@ -130,7 +130,6 @@ module.exports = function(app) {
   app.get("*", function(req, res) {
     res.render("404");
   });
-<<<<<<< HEAD
 };
 
 // passport routes for htmlroutes for user authentication
@@ -155,6 +154,3 @@ module.exports = (app) => {
     res.sendFile(path.join(__dirname, "../public/login.html"))
   });
 }
-=======
-};
->>>>>>> 86c2337950becd50d79c9295a2078b29baaa44fb

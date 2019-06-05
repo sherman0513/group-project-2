@@ -27,3 +27,5 @@ module.exports = function(sequelize, DataTypes) {
 
   return SearchFav;
 };
+
+// WILL NEED THIS AND TO ASSOCIATE WITH USER ID'S

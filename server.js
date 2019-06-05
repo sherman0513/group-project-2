@@ -8,7 +8,6 @@ var session = require("express-session");
 var passport = require("passport");
 var localStrategy = require("./config/passport");
 
-<<<<<<< HEAD
 // sets up port and requiring models for syncing
 var PORT = process.env.PORT || 3000;
 var db = require("./models");
@@ -18,20 +17,6 @@ var app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // app.use(cookieParser());
-=======
-var db = require("./models");
-
-var app = express();
-var PORT = process.env.PORT || 8080;
-
-// Middleware
-app.use(
-  express.urlencoded({
-    extended: false
-  })
-);
-app.use(express.json());
->>>>>>> 86c2337950becd50d79c9295a2078b29baaa44fb
 app.use(express.static("public"));
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
@@ -78,13 +63,8 @@ app.set("view engine", "handlebars");
 require("./routes/apiRoutes");
 require("./routes/htmlRoutes");
 
-<<<<<<< HEAD
+
 var syncOptions = { force: true };
-=======
-var syncOptions = {
-  force: false
-};
->>>>>>> 86c2337950becd50d79c9295a2078b29baaa44fb
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`

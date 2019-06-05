@@ -1,0 +1,219 @@
+{{!-- <!DOCTYPE html>
+<html>
+ 
+<head>
+    <title></title>
+</head>
+ 
+<body>
+    <form id="signup" name="signup" method="post" action="/signup">
+        <label for="email">Email Address</label>
+        <input class="text" name="email" type="email" />
+        <label for="firstname">Firstname</label>
+        <input name="firstname" type="text" />
+        <label for="lastname">Lastname</label>
+        <input name="lastname" type="text" />
+        <label for="password">Password</label>
+        <input name="password" type="password" />
+        <input class="btn" type="submit" value="Sign Up" />
+    </form>
+ 
+</body>
+ 
+</html> --}}
+
+{{!-- <!DOCTYPE html>
+<html>
+ 
+<head>
+    <title></title>
+</head>
+ 
+<body>
+    <form id="signup" name="signup" method="post" action="/signup">
+        <label for="email">Email Address</label>
+        <input class="text" name="email" type="email" />
+        <label for="firstname">Firstname</label>
+        <input name="firstname" type="text" />
+        <label for="lastname">Lastname</label>
+        <input name="lastname" type="text" />
+        <label for="password">Password</label>
+        <input name="password" type="password" />
+        <input class="btn" type="submit" value="Sign Up" />
+    </form>
+ 
+</body>
+ 
+</html> --}}
+
+{{!-- <form id="signup" name="signup" method="post" action="/signup">
+    <label for="email">Email Address</label>
+    <input class="text" name="email" type="email" />
+    <label for="firstname">Firstname</label>
+    <input name="firstname" type="text" />
+    <label for="lastname">Lastname</label>
+    <input name="lastname" type="text" />
+    <label for="password">Password</label>
+    <input name="password" type="password" />
+    <input class="btn" type="submit" value="Sign Up" />
+</form> --}}
+
+<section class="mainSection">
+    <nav class="navbar navbar-expand-lg navbar-dark mainNavBar" id="nav">
+        <!-- <a class="navbar-brand titleNav" id="navTitle" href="#">Take A Hike</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    {{!-- <a href="/index" class="nav-link" >Home</a> --}}
+                    <a href="/">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Hiking Tips</a>
+                </li>
+            </ul>
+            <ul id="signInLink" class="navbar-nav mr-auto">
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+    <div class="container containerForm rubberBand">
+        <form id="signInForm" class="formSign">
+            <div class="row">
+
+
+                <div class="form-group col-sm-6">
+                    <!-- <label for="inputName" class="control-label">Name</label> -->
+                    <input type="text" class="form-control" id="fNameMem" placeholder="First Name" required>
+                </div>
+
+                <div class="form-group col-sm-6">
+                    <!-- <label for="inputName" class="control-label">Name</label> -->
+                    <input type="text" class="form-control" id="lNameMem" placeholder="Last Name" required>
+                </div>
+            </div>
+            {{!-- <div class="form-inline"> --}}
+            <div class="row">
+
+
+                <div class="form-group col-sm-9">
+                    <!-- <label for="user-pass">Password</label> -->
+                    <input type="password" class="form-control" id="user-pass" placeholder="Password" required>
+                </div>
+                <div class="form-group col-sm-3" id="btnDiv">
+                    <button id="submitSignIn" type="submit" class="btn btn-primary">Sign In</button>
+                </div>
+            </div>
+            {{!-- </div> --}}
+        </form>
+
+        <hr class="divider">
+        <p id="textSign"> <strong> New to Take A Hike? Sign Up Now!</strong> </p>
+        <form id="add" class="formSign">
+            <div class="form-group">
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <!-- <label for="inputName" class="control-label">Name</label> -->
+                        <input type="text" class="form-control" id="fName" placeholder="First Name">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <!-- <label for="inputName" class="control-label">Name</label> -->
+                        <input type="text" class="form-control" id="lName" placeholder="Last Name">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    {{!-- <label for="inputAddress">Address</label> --}}
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        {{!-- <label for="inputCity">City</label> --}}
+                        <input type="text" class="form-control" id="inputCity" placeholder="City">
+                    </div>
+                    <div class="form-group col-md-4">
+                        {{!-- <label for="inputState">State</label> --}}
+                        <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>AK</option>
+                            <option>AZ</option>
+                            <option>CA</option>
+                            <option>CO</option>
+                            <option>CT</option>
+                            <option>DE</option>
+                            <option>FL</option>
+                            <option>GA</option>
+                            <option>HI</option>
+                            <option>ID</option>
+                            <option>IL</option>
+                            <option>KS</option>
+                            <option>MA</option>
+                            <option>NV</option>
+                            <option>NM</option>
+                            <option>UT</option>
+                            <option>WA</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                        {{!-- <label for="inputZip">Zip</label> --}}
+                        <input type="text" class="form-control" id="inputZip" placeholder="Zip">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="form-group col-sm-12">
+                            <!-- <label for="inputEmail" class="control-label">Email</label> -->
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email"
+                                data-error="Please enter a valid email address." required>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        {{!-- <label for="inputPassword" class="control-label">Password</label> --> --}}
+
+                        <div class="row">
+                            <div class="form-group col-sm-6">
+                                <input type="password" data-minlength="6" class="form-control" id="inputPassword"
+                                    placeholder="Password" required>
+                                &nbsp; <div class="help-block">Min of six characters</div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <input type="password" class="form-control" id="inputPasswordConfirm"
+                                    data-match="#inputPassword" data-match-error="Uh oh, these don't match!"
+                                    placeholder="Confirm" required>
+                                <div class="help-block with-errors">
+                                    <br>
+                                    <button id="submitSignUp" type="submit" class="btn btn-primary">Sign Up</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{!-- <div class="form-group">  --}}
+                    {{!-- <button id="submitSignUp" type="submit" class="btn btn-primary">Sign Up</button> --}}
+                </div>
+        </form>
+    </div>
+    {{!-- </div> --}}
+</section>
+
+<div class="card-footer text-white footer" id="footer">
+    <p class="footer-text"> &copy; 2018 by JMAC. All rights reserved. </p>
+</div>
+<script>
+    $(".modal-wrapper").toggle();
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/assets/js/index.js"></script>

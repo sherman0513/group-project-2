@@ -1,0 +1,24 @@
+<ul id="trailBg">
+
+   {{#each trails}}
+
+   <div class="card border border-success ready" id={{ this.id}}>
+      <div class="card-body">
+
+
+         <img src={{imgSmallMed}} alt="Smiley face" width="200" height="200">
+
+         <h2>{{{ name}}}</h2>
+         <p>{{summary}}</p>
+         <p><span> Difficulty:</span> {{ difficulty}}</p>
+         <p><span> Location:</span> {{location}}</p>
+
+         <button type="button" class="btn btn-info" data-myval={{ this.id}}>Save This Hike</button>
+
+      </div>
+
+   </div>
+
+   {{/each}}
+   
+</ul>
