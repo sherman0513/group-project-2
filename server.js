@@ -23,7 +23,6 @@ app.use(express.static("public"));
 // // engines like handlebars can handle a helper name with dashes
 // app.helper('link-to', require('helper-link-to'));
 
-
 // Handlebars
 app.engine(
   "handlebars",
