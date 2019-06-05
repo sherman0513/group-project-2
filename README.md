@@ -1,6 +1,6 @@
 ######## Group-Project-2 ########
-   ### Hikes by Location ####
-Sometimes you want to unplug from the electronics of life and escape. Hiking is the escape you need. This app will help you plan your next exiting hiking trip. For all those stops along the way that make a hike truly memorable. The most exiting part is it can be as close as your back door or a trip you have been planning for years. This is the app to help you plan that hike.
+   ### Take A Hike ####
+There is no better way to enjoy nature than to hike trails. To fully appreciate your surroundings, you must take it in slowly. The sights, the sounds and the smells of nature cannot be absorbed in an air-conditioned car traveling 80 miles an hour. You must fully engage your senses to your surroundings to get the peace and tranquility that only a hike can give. To decompress from life, you must slow down and spend time in nature. And we can make it easier with our “Take A Hike” app to help you plan and record your experiences. Walk through the interesting paths of life. See the sights that are not available on any road. And take a hike!
 
 # To run "Hikes by Location" you will need to ...
 1. clone this repo into your machine
@@ -11,13 +11,13 @@ Sometimes you want to unplug from the electronics of life and escape. Hiking is 
 # Wonderful Features and Options for specific requests 
 * Have login authentication 
 * Saved user profile
-* finds interesting things like waterfalls or streams on the hike.
 * It also helps with seeing "specific landmarks" up close and personal.
 
 # Future options to add to "Hikes by Location" 
 * mountain bike trails
 * expand to ski resort
 * campsite and RV locations
+* finds interesting things like waterfalls or streams on the hike.
 
 
 # You will need to install 
