@@ -5,36 +5,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
- 
+
   {{!-- <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet"> --}}
- <link href="https://fonts.googleapis.com/css?family=Montserrat|Tillana&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Tillana&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
   <link rel="stylesheet" href="/assets/css/styles.css">
 
 
-<!--bootstrap link -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/united/bootstrap.min.css" rel="stylesheet" integrity="sha384-/jW88w4AK58qCyfTnqErGkTLcE+LoRhfbA68B00ca/AjGmFd+UG+fB6ryk6g6T9p"
-    crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  <!--bootstrap link -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/united/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-/jW88w4AK58qCyfTnqErGkTLcE+LoRhfbA68B00ca/AjGmFd+UG+fB6ryk6g6T9p" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 
 
   <!-- JQuery -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
   <script src="~/Scripts/handlebars-v2.0.0.js"></script>
+  <script src=>"https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"
+  </script>
 
- 
-  {{!-- <script src="/assets/js/hikers.js"></script> --}}
-   <script src="/assets/js/trails.js"></script>
+  <script src="/assets/js/trails.js"></script>
   <script src="/assets/js/index.js"></script>
 
   <title>Take A Hike</title>
 </head>
 
 <body>
-  {{{body}}}
-</body>
+  <section class="mainSection">
 
+    <nav class="navbar navbar-expand-lg navbar-dark mainNavBar" id="nav">
+     <a class="navbar-brand titleNav" id="navTitle" href="#">Take A Hike</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+        aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a href="/">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./aboutUs" data-trigger="click">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./tips" data-trigger="click">Hiking Tips</a>
+          </li>
+        </ul>
+        <ul id="signInLink" class="navbar-nav mr-auto">
+          <a href="/userReg" class="btn btn-primary" role="button" aria-pressed="true">sign in</a>
+        </ul>
+      </div>
+    </nav>
+
+
+    {{{body}}}
+
+  </section>
+
+
+<div class="card-footer text-white footer" id="footer">
+  <p class="footer-text"> &copy; 2019 by Group JMAC. All rights reserved. </p>
+</div>
+</body>
 </html>
