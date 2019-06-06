@@ -305,10 +305,12 @@ body {
   transform: translate(-50%, -50%);
 } */
 
+/* 308 =========== this is christen stuff  ============================ */
 
 #sectionC {
-  padding: 10rem 0;
-  background-color: #fff;
+  width: auto;
+  /* padding: 10rem 0; */
+  /* background-color: #fff; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -318,25 +320,32 @@ body {
 }
 
 #headingC {
-  text-transform: uppercase;
-  font-size: 4.5rem;
-  letter-spacing: 3px;
-  margin-right: -3px;
-  margin-bottom: 4rem;
+  font-size: 3rem;
+  /* letter-spacing: 3px; */
+  /* margin-right: -3px; */
+  margin-right: 0;
+  /* margin-bottom: .5rem; */
+  margin-bottom: 0;
   text-align: center;
   color: #333;
   position: relative;
   font-family: "tillana", cursive;
-  background-color: lightblue;
-  width: 700px;
+  /* background-color: lightblue; */
+  width: 600px;
 }
 
 .blue-box-container {
   text-align: center;
-}
+  width: 100%;
+  background-color: transparent;
+  /* margin: 0; */
+ }
 
-.blue-box{
+ .blue-box { 
+  /* text-align: center; */
   display: inline-block;
+  text-align: left;
+  /* width: 700px;  */
 }
 
 .card-wrapper {
@@ -344,17 +353,19 @@ body {
   align-items: center;
   align-content: center;
   flex-direction: column;
+  width: auto;
+  justify-content: center;
 }
 
-#cardA, #cardB, #cardC, #cardD {
+.cardC {
   width: 15rem;
   background-color: #ebeef8;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 1rem 1rem;
-  box-shadow: .5rem .5rem 3rem rgba(0,0,0,0.2);
+  margin: .5rem .5rem;
+ 
 }
 
 #card-imgA, #card-imgB, #card-imgC, #card-imgD {
@@ -365,19 +376,20 @@ body {
 }
 
 .profile-img {
-  width: 15rem;
-  height: 15rem;
+  width: 12rem;
+  height: 13rem;
   object-fit: cover;
   border-radius: 50%;
   margin-top: -11rem;
   z-index: 999;
-  border: 1rem solid #ebeef8;
+  border: .5rem solid #ebeef8;
 }
 
-.card h1 {
-  font-size: 2.5rem;
+.cardC h1 {
+  font-size: 2rem;
   color: #333;
-  margin: 1.5rem 0;
+  margin: 1rem .5rem;
+  text-align: center;
 }
 
 .job-title {
@@ -437,7 +449,7 @@ body {
       justify-content: center;
       align-items: center;
   }
-  .card{
+  .cardC{
       margin: 2rem;
   }
 }
@@ -447,7 +459,7 @@ p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-img {
+.imgC{
   margin: 20px;
   float: left;
   width:170px;
