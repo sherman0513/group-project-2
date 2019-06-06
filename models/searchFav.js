@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   var SearchFav = sequelize.define("SearchFav", {
-    trailName: DataTypes.STRING,
+    trailname: DataTypes.STRING,
     type: DataTypes.STRING,
     summary: DataTypes.STRING,
     difficulty: DataTypes.STRING,
@@ -11,19 +11,19 @@ module.exports = function(sequelize, DataTypes) {
     length: DataTypes.DOUBLE,
     longit: DataTypes.DOUBLE,
     latit: DataTypes.DOUBLE,
-    conditionStat: DataTypes.STRING,
-    conditionDetails: DataTypes.STRING,
-    conditionDate: DataTypes.STRING,
-    searchedDate: DataTypes.DATE
+    conditionstat: DataTypes.STRING,
+    conditiondetails: DataTypes.STRING,
+    conditiondate: DataTypes.STRING,
+    trailid: DataTypes.DOUBLE
   });
 
-  // SearchFav.associate = function(models) {
-  //   SearchFav.belongsTo(models.Hiker, {
-  //     foreignKey: {
-  //       allowNull: true
-  //     }
-  //   });
-  // };
+  SearchFav.associate = function(models) {
+    SearchFav.belongsTo(models.Hiker, {
+      foreignKey: {
+        allowNull: true
+      }
+    });
+  };
 
   return SearchFav;
 };

@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 module.exports = function(sequelize, DataTypes) {
   var Hiker = sequelize.define("Hiker", {
-    fName: {
+    fname: {
       type: DataTypes.STRING,
       allowNull: true,
       validate: {
@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
 
-    lName: {
+    lname: {
       type: DataTypes.STRING,
       allowNull: true,
       validate: {
@@ -35,21 +35,10 @@ module.exports = function(sequelize, DataTypes) {
         len: [5]
       }
     }
-    // c1: DataTypes.BOOLEAN,
-    // c2: DataTypes.BOOLEAN,
-    // c3: DataTypes.BOOLEAN,
-    // c4: DataTypes.BOOLEAN,
-    // c5: DataTypes.BOOLEAN,
-
-    // longit: DataTypes.DOUBLE,
-    // latit: DataTypes.DOUBLE
   });
 
   Hiker.associate = function(models) {
     Hiker.hasMany(models.SearchFav, {
-      onDelete: "cascade"
-    });
-    Hiker.hasMany(models.EmailSent, {
       onDelete: "cascade"
     });
   };
