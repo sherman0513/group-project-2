@@ -1,15 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "Clark1472",
-    "database": "hikingTrekdb",
+    "password": null,
+    "database": "exampledb",
     "host": "localhost",
-    "dialect": "mysql",
-    "logging": false
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "password",
+    "password": null,
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",
