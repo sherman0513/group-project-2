@@ -1,35 +1,32 @@
 // $("#searchLocation").on("click", function(event) {
 
-function trailSearch() {
-  var lat = 33.44838;
-  var long = -112.07404;
-  var distance = 10;
-  // var radius = $("#search-max-dist")
-  // var location =
+// function trailSearch() {
+//   var lat = 33.44838;
+//   var long = -112.07404;
+//   var distance = 10;
+//   // var radius = $("#search-max-dist")
+//   // var location =
 
-  var queryURL =
-    "https://www.hikingproject.com/data/get-trails?lat=" +
-    lat +
-    "&lon=" +
-    long +
-    "&maxDistance=" +
-    distance +
-    "&key=200478105-d8aad42d0f96cc437e18f84fec7edbbc";
-  console.log(queryURL);
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  })
-    .done(function(data) {
-      console.log(data);
-    })
-    .fail(function(error) {
-      console.log("Promise catch: " + error);
-    });
-}
-
-// trailSearch();
-
+//   var queryURL =
+//     "https://www.hikingproject.com/data/get-trails?lat=" +
+//     lat +
+//     "&lon=" +
+//     long +
+//     "&maxDistance=" +
+//     distance +
+//     "&key=200478105-d8aad42d0f96cc437e18f84fec7edbbc";
+//   console.log(queryURL);
+//   $.ajax({
+//     url: queryURL,
+//     method: "GET"
+//   })
+//     .done(function(data) {
+//       console.log(data);
+//     })
+//     .fail(function(error) {
+//       console.log("Promise catch: " + error);
+//     });
+// }
 
 // require the dependencies
 // require("dotenv").config();

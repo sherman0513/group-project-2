@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var searchFav = sequelize.define("searchFav", {
+  var SearchFav = sequelize.define("SearchFav", {
     trailName: DataTypes.STRING,
     type: DataTypes.STRING,
     summary: DataTypes.STRING,
@@ -17,13 +17,13 @@ module.exports = function(sequelize, DataTypes) {
     searchedDate: DataTypes.DATE
   });
 
-  searchFav.associate = function(models) {
-    searchFav.belongsTo(models.hiker, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
+  // SearchFav.associate = function(models) {
+  //   SearchFav.belongsTo(models.Hiker, {
+  //     foreignKey: {
+  //       allowNull: true
+  //     }
+  //   });
+  // };
 
-  return searchFav;
+  return SearchFav;
 };

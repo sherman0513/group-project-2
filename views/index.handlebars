@@ -1,114 +1,25 @@
-<section class="mainSection">
-  <nav class="navbar navbar-expand-lg navbar-dark mainNavBar" id="nav">
-    <!-- <a class="navbar-brand titleNav" id="navTitle" href="#">Take A Hike</a> -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
-      aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Hiking Tips</a>
-        </li>
-      </ul>
-      <ul id="signInLink" class="navbar-nav mr-auto">
-        <a href="/userReg" class="btn btn-primary" role="button" aria-pressed="true">sign in</a>
+<div class="container">
+  <div class="row">
 
-        <!-- dynamically generated sign in link or user menu -->
-      </ul>
-    </div>
-  </nav>
 
-  <div class="container">
-    <div class="row">
-      <div class="col">
-
-        <div class="titleContainer">
-          <h1 class="title" id="title">Take A Hike</h1>
-        </div>
-      </div>
-    </div>
-
-  </div>
-  {{!-- <div class="row">
-
-    <form action="">
-      <div class="form-group">
-        <input type="text" class="form-control mb-4" id="locationInput" placeholder="Location">
-        <div class="invalid-feedback">
-          Please enter a location.</div>
-      </div>
-    </form>
- --}}
-
-  {{!-- <div class="search">
-    <form class="formSearch">
-      <div class="form-row align-items-center">
-        <div class="col-auto">
-          <input type="text" class="form-control mb-4" id="locationInput" placeholder="Location">
-          <div class="invalid-feedback">
-            Please enter a location.
+    <form class="hikeSearch" method="get">
+      <div class="form">
+       <h2>
+  
+    
+          <div class="row">
+            <input type="text" class="form-control mb-2" id="locationInput" placeholder="Location">
+            <div class="invalid-feedback">
+              Please enter a location.
+            </div>
+            {{!-- <button type="submit" class="btn btn-primary" id="searchLocation">Search</button> --}}
+            <a href="/trails" class="btn btn-primary" id="searchLocation" role="button" aria-pressed="true">Search</a>
+            <br>
+            {{!-- <button id="test"></button> --}}
           </div>
-        </div>
-        <div class="col-auto">
-          <button type="submit" class="btn btn-primary mb-4" id="searchLocation">Search</button>
         </div>
       </div>
     </form>
-  </div>
-  </div> --}}
 
-  <form class="hikeSearch">
-    <div class="form">
-      <div class="col-auto">
-        <div class="row">
-          {{!-- <div class="col"> --}}
-          <input type="number" step="any" class="form-control mb-2" id="search-min-lng"
-            placeholder="Min Trail Length (in miles)">
-        </div>
-        <div class="row">
-          {{!-- <div class="col"> --}}
-          <input type="number" step="any" class="form-control mb-2" id="search-max-dist"
-            placeholder="Max Search Radius (in miles)">
-        </div>
-        <div class="row">
-          {{!-- <div class="col"> --}}
-          <select class="form-control mb-2" id="search-diff">
-            <option value="green">Easy</option>
-            <option value="greenBlue">Somewhat Easy</option>
-            <option value="blue">Intermediate</option>
-            <option value="blueBlack">Somewhat Hard</option>
-            <option value="black">Hard</option>
-            <option value="dblack">Extremely Hard</option>
-          </select>
-        </div>
-        <div class="row">
-          <input type="text" class="form-control mb-2" id="locationInput" placeholder="Location">
-          <div class="invalid-feedback">
-            Please enter a location.
-          </div>
-          {{!-- <button type="submit" class="btn btn-primary" id="searchLocation">Search</button> --}}
-          <a href="/trails" class="btn btn-primary" id="searchLocation" role="button" aria-pressed="true">Search</a>
-          <br>
-          {{!-- <button id="test"></button> --}}
-        </div>
-      </div>
-    </div>
-  </form>
-</section>
-
-
-<div class="card-footer text-white footer" id="footer">
-  <p class="footer-text"> &copy; 2019 by Group JMAC. All rights reserved. </p>
-</div>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/assets/js/index.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/assets/js/index.js"></script>
