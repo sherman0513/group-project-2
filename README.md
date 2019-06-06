@@ -19,14 +19,6 @@ There is no better way to enjoy nature than to hike trails. To fully appreciate 
 * campsite and RV locations
 * finds interesting things like waterfalls or streams on the hike.
 
-
-# You will need to install 
-https://www.npmjs.com/package/cookies :  npm install cookies
-https://rapidapi.com/trailapi/api/trailapi
-https://www.google.com/maps/@33.2646067,-111.7435798,15z?hl=en
-https://www.mysql.com/downloads/ : npm install mysql
-
-
 # Group 2 Authors
 * Jonathan Sherman
 * Mike Hageali
