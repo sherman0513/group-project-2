@@ -24,138 +24,80 @@ var latlngUrl =
 var lat;
 var lng;
 
-module.exports = function(app) {
-  // Load index page
-  // app.get("/", function(req, res) {
-  //   db.Example.findAll({}).then(function(dbExamples) {
-  //     res.render("index", {
-  //       msg: "Welcome!",
-  //       examples: dbExamples
-  //     });
-  //   });
-  // });
-
+module.exports = function (app) {
   //Render list of users on UserList handlebar page
-  app.get("/api/users", function(req, res) {
-    db.Hiker.findAll({}).then(function(dbHikers) {
+  app.get("/api/users", function (req, res) {
+    db.Hiker.findAll({}).then(function (dbHikers) {
       res.render("UserList", {
         msg: "Welcome!",
         examples: dbHikers
       });
-    });  
+    });
   });
-
-  // // Load example page and pass in an example by id
-  // app.get("/example/:id", function (req, res) {
-  //   db.Example.findOne({
-  //     where: {
-  //       id: req.params.id
-  //     }
-  //   }).then(function (
-  //     dbExample
-  //   ) {
-  //     res.render("example", {
-  //       example: dbExample
-  //     });
-  //   });
-  // });
-
-  app.get("/trails", function(req, res) {
+  app.get("/trails", function (req, res) {
 
     axios
       .get(latlngUrl)
-      .then(function(response) {
-      //var myresult = JSON.stringify(response.data.results[0].geometry, null,2);
- 
+      .then(function (response) {
+        //var myresult = JSON.stringify(response.data.results[0].geometry, null,2);
+
         lat = response.data.results[0].geometry.location.lat;
         lng = response.data.results[0].geometry.location.lng;
- 
+
         var trailUrl =
-        "https://www.hikingproject.com/data/get-trails?lat=" +
-        lat +
-        "&lon=" +
-        lng +
-        "&maxDistance=" +
-        searchRadius +
-        "&minLength=" +
-        searchLength +
-        "&key=" +
-        trailsKey;
- 
-        axios.get(trailUrl).then(function(response) {
-        // console.log(response.data.trails);
- 
+          "https://www.hikingproject.com/data/get-trails?lat=" +
+          lat +
+          "&lon=" +
+          lng +
+          "&maxDistance=" +
+          searchRadius +
+          "&minLength=" +
+          searchLength +
+          "&key=" +
+          trailsKey;
+
+        axios.get(trailUrl).then(function (response) {
+          // console.log(response.data.trails);
+
           var data = {};
           data = response.data.trails;
           //data.stringify = JSON.stringify(data);
           console.log(data);
           console.log("renderME");
-          res.render("trails", {trails: data });
+          res.render("trails", { trails: data });
         });
- 
-      //console.log(response.data.results[0].geometry.location.lat);
-      //console.log(response.data.results[0].geometry.location.lng);
+
+        //console.log(response.data.results[0].geometry.location.lng);
       })
- 
-      .catch(function(error) {
-      // handle error
+
+      .catch(function (error) {
+        // handle error
         res.json(error);
       })
-      .finally(function() {
-      // always executed
+      .finally(function () {
+        // always executed
       });
- 
+
   });
- 
-  app.get("/", function(req, res) {
-    res.render("index");
-  });
- 
-  app.get("/userReg", function(req, res) {
-    res.render("userReg");
-  });
- 
-  app.get("/aboutUs", function(req, res) {
+
+  // app.get("/", function (req, res) {
+  //   res.render("index");
+  // });
+
+  // app.get("/userReg", function (req, res) {
+  //   res.render("userReg");
+  // });
+
+  app.get("/aboutUs", function (req, res) {
     res.render("aboutUs");
   });
- 
-  app.get("/tips", function(req, res) {
+
+  app.get("/tips", function (req, res) {
     res.render("tips");
   });
- 
-  // app.post("/trails", function(req, res) {
-  //   res.render("trails");
-  // });
- 
-  /*   app.get("/trails", function(req, res) {
-    res.render("trails");
-  }); */
- 
+
   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
+  app.get("*", function (req, res) {
     res.render("404");
   });
 };
-
-// passport routes for htmlroutes for user authentication
-var path = require("path");
-
-var isAuthenticated = require("../config/middleware/isAuthenticate.js");
-
-module.exports = (app) => {
-  app.get("/", (req, res) => {
-    if (req.user) {
-      res.redirect("/members");
-    }
-    // change path to what ever is correct path amy created
-    res.sendFile(path.join(__dirname, "../public/signup.html"));
-  });
-
-  app.get("/login", (req, res) => {
-    if (req.user) {
-      res.redirect("/members");
-    }
-        // change path to what ever is correct path amy created
-    res.sendFile(path.join(__dirname, "../public/login.html"))
-  });
-}

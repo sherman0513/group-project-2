@@ -35,27 +35,7 @@ module.exports = function(sequelize, DataTypes) {
         len: [5]
       }
     }
-    // c1: DataTypes.BOOLEAN,
-    // c2: DataTypes.BOOLEAN,
-    // c3: DataTypes.BOOLEAN,
-    // c4: DataTypes.BOOLEAN,
-    // c5: DataTypes.BOOLEAN,
-
-    // longit: DataTypes.DOUBLE,
-    // latit: DataTypes.DOUBLE
   });
-
-  // Hiker.associate = function(models) {
-  //   Hiker.hasMany(models.SearchFav, {
-  //     onDelete: "cascade"
-  //   });
-  // };
-
-  // Hiker.associate = function(models) {
-  //   Hiker.hasMany(models.EmailSent, {
-  //     onDelete: "cascade"
-  //   });
-  // };
 
   return Hiker;
 };
