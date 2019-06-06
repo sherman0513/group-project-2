@@ -4,7 +4,8 @@
     "password": "password",
     "database": "hikingTrekdb",
     "host": "localhost",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "logging": false
   },
   "test": {
     "username": "root",

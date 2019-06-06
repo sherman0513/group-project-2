@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <ul id= "trailBg">
 
  {{#each trails}}
@@ -40,22 +41,62 @@
    </div>
 </div>
    <br> --
+=======
+<ul id="trailBg">
+
+   
+
+   {{#each trails}}
+   
+
+   <div class="card border border-success ready" id={{ this.id}}>
+      <div class="card-body" id="hikeCard">
+         <div class="row">
+            <div class="col-sm-3">
+
+
+               <img src={{imgSmallMed}} alt="Smiley face" width="230px" height="160px" style="border:solid">
+
+            </div>
+            <div id= "hikeTitle" class="col-sm-5">
+               <header id="hikeName">
+                      <h3><span id= "hikeName">{{{name}}}</span></h3>
+                  {{!-- <h3><span style= "font-family: Tillana">{{{name}}}</span></h3> --}}
+               </header>
+           
+                <div class="container" id="summary">
+                  <h6>{{summary}}</h6>
+                  </div>
+                  <button type="button" class="btn btn-info" data-myval={{ this.id}}>Save This Hike</button>
+               
+                </div>
+            <div class="col-sm-4">
+               <h4>{{location}}</h4>
+               
+               <h5 style= "font-style: italic"> Difficulty: {{difficulty}}</h5>
+               <p id= "stars">STARS: {{stars}}</p>
+
+               <h5 style= "font-style: italic"><strong><a href="{{url}}">More Info </a></strong></h5>
+               
+            </div>
+              
+            </div>
+         </div>
+
+      </div>
+
+  
+        
+
+   {{!-- <br> --}}
+  
+>>>>>>> 18959b424289f5f52337d0d5a78acd4b1b0f8f4e
 
    {{/each}}
 </ul>
 
-<script>
-    $('img').on("click", function () {
-        var imageSrc = this.attr('src');
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="/assets/js/index.js"></script>
+   {{!-- <script src="/assets/js/modal.js"></script> --}}
 
-        $('.modal-wrapper .header img').attr("src",imageSrc);
-
-
-   $('.modal-wrapper').toggle();
-
-});
-</script> 
-
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/assets/js/index.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>

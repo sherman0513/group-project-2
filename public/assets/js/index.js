@@ -125,6 +125,7 @@ var handleFormSubmit = function(event) {
   console.log("i'm here");
 
   var user = {
+   
     fName: $fName.val().trim(),
     lName: $lName.val().trim(),
     email: $email.val().trim(),

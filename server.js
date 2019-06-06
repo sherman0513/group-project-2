@@ -50,6 +50,13 @@ app.use((req, res, next) => {
   next();
 })
 
+// assemble is a descendant of `templates`
+// var app = assemble();
+// app.engine('hbs', require('engine-handlebars'));
+
+// // engines like handlebars can handle a helper name with dashes
+// app.helper('link-to', require('helper-link-to'));
+
 // Handlebars
 app.engine(
   "handlebars",

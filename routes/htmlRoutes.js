@@ -11,6 +11,7 @@ var axios = require("axios");
 var googleMapsGeoKey = "AIzaSyAcWi7e4cYLA0SxYDy4qM4TI4itINyOIek";
 var trailsKey = "200478741-5d75b3d8fc9d96ba1f9d4da1ddd5daf7";
 
+// var address = $("#locationInput");
 var address = "85295";
 var searchRadius = 100;
 var searchLength = 10;
@@ -42,7 +43,6 @@ module.exports = function(app) {
         examples: dbHikers
       });
     });  
-   
   });
 
   // // Load example page and pass in an example by id
@@ -105,9 +105,6 @@ module.exports = function(app) {
       // always executed
       });
  
- 
- 
- 
   });
  
   app.get("/", function(req, res) {
@@ -116,6 +113,14 @@ module.exports = function(app) {
  
   app.get("/userReg", function(req, res) {
     res.render("userReg");
+  });
+ 
+  app.get("/aboutUs", function(req, res) {
+    res.render("aboutUs");
+  });
+ 
+  app.get("/tips", function(req, res) {
+    res.render("tips");
   });
  
   // app.post("/trails", function(req, res) {

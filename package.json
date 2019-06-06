@@ -11,6 +11,7 @@
   },
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "connect-flash": "^0.1.1",
@@ -20,6 +21,14 @@
     "express-session": "^1.16.1",
     "express-validator": "^5.3.1",
     "mysql": "^2.17.1",
+=======
+    "axios": "^0.19.0",
+    "dotenv": "^6.2.0",
+    "engine-handlebars": "^1.0.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "helper-link-to": "^0.3.0",
+>>>>>>> 18959b424289f5f52337d0d5a78acd4b1b0f8f4e
     "mysql2": "^1.6.4",
     "passport-local": "^1.0.0",
     "sequelize": "^4.41.2",

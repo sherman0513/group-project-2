@@ -4,13 +4,17 @@ module.exports = function(sequelize, DataTypes) {
     fName: {
       type: DataTypes.STRING,
       allowNull: true,
-      validate: { len: [1] }
+      validate: {
+        len: [1]
+      }
     },
 
     lName: {
       type: DataTypes.STRING,
       allowNull: true,
-      validate: { len: [1] }
+      validate: {
+        len: [1]
+      }
     },
 
     // gender: DataTypes.STRING,
@@ -20,12 +24,16 @@ module.exports = function(sequelize, DataTypes) {
     zip: {
       type: DataTypes.STRING,
       allowNull: true,
-      validate: { len: [5] }
+      validate: {
+        len: [5]
+      }
     },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: { len: [5] }
+      validate: {
+        len: [5]
+      }
     }
     // c1: DataTypes.BOOLEAN,
     // c2: DataTypes.BOOLEAN,

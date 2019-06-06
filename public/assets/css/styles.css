@@ -2,7 +2,7 @@
   line-height: 2.5;
 }
 
-body{
+body {
   background-color: #a6c5a5;
   background-image: url("../images/action-adventure-alps-238622.jpg");
   /* background-position-y: bottom; */
@@ -10,17 +10,18 @@ body{
   background-size: 100%;
 }
 
-*{
+* {
   font-family: 'Montserrat', sans-serif;
 }
 
+
 #nav {
   position: relative;
-  height:9%;
-  margin-bottom: 20px;
+  height: 12%;
+  /* margin-bottom: 20px; */
 }
 
-#title{
+#title {
   font-family: 'Tillana', cursive;
   /* font-family: 'Merienda One', cursive; */
   font-size: 8vh;
@@ -31,59 +32,68 @@ body{
 
 }
 
-/* #navTitle {
+#navTitle {
   font-family: 'Tillana', cursive;
   font-size: 50px;
   position: absolute;
   left: 575px;
 
-
-} */
+}
 
 #navbarColor01 {
   position: absolute;
   width: 95%;
   /* background-color: #3f695b; */
 }
-.clearfix::after{
+
+.clearfix::after {
   content: "";
   clear: both;
   display: block;
 }
 
 .mainSection,
-.signInUpSection{
+.signInUpSection {
   height: 93vh;
 }
 
-.mainNavBar, #footer{
+.mainNavBar,
+#footer {
   /* height: 7vh; */
   padding: 8px;
   z-index: 10;
   background-color: hsl(159, 22%, 25%);
 }
 
-#signInLink{
-position: absolute;
-right: 3%;
+#signInLink {
+  position: absolute;
+  right: 3%;
 }
 
 #trailBg {
-  background-image: url("../images/adventure-daylight-daytime-1194235.jpg")
+  background-image: url("../images/adventure-daylight-daytime-1194235.jpg");
+  padding: 30px;
 }
 
-.containerTitle{
-  height:20%;
-  width: 40%; 
+#summary {
+  border: lightgray;
+  background-color: #e9ecef;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.containerTitle {
+  height: 20%;
+  width: 40%;
   position: absolute;
   top: 15%;
   left: 50%;
   transform: translate(-50%, -90%);
   z-index: 99;
   text-align: center;
-  }
+}
 
-.containerSearch{
+.containerSearch {
   height: 40%;
   width: 60%;
   background-color: rgba(212, 210, 210, 0.623);
@@ -94,20 +104,20 @@ right: 3%;
   z-index: 99;
 }
 
-.formSearch{
+.formSearch {
   height: 15%;
-  position: absolute; 
+  position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, 20%);
   z-index: 99;
-} 
+}
 
-.hikeSearch{
+.hikeSearch {
   position: absolute;
-  width:40%;
+  width: 40%;
   /* top: 60%; */
-  left: 50%; 
+  left: 50%;
   transform: translate(-50%, -50%);
   z-index: 99;
   margin-top: 10%;
@@ -120,21 +130,45 @@ right: 3%;
 
 #searchLocation {
   position: absolute;
- right: 0;
- margin-left: 5px;
+  right: 0;
+  margin-left: 5px;
+}
+
+.card {
+  margin: 0 40px 10px;
 }
 
 .card-body {
   text-align: center;
   border: darkolivegreen;
   border-style: solid;
-  background-color: #cbd6cf;
+  background-color: #d6d8d7;
   float: left;
+  margin: 5px;
+}
+
+#hikeName {
+  font-family: Tillana;
+  margin: 5px 0 15px 0;
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+#stars {
+  font-weight: bolder;
+  color: green;
+  margin: 20px;
+  font-size: 20px;
+
+}
+
+#hikeTitle {
+  text-align: center;
 }
 
 .optionSearch {
   position: absolute;
-  width:90%;
+  width: 90%;
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -142,16 +176,16 @@ right: 3%;
   margin-top: 10%;
 }
 
-.footer{
+.footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  clear: both; 
+  clear: both;
   margin-top: 10px;
   padding: 7px;
 }
 
-.footer-text{
+.footer-text {
   text-align: center;
   font-size: 90%;
   margin: 4px;
@@ -161,8 +195,8 @@ right: 3%;
 
 /* Sign In/Up Section  */
 
-.signInUpSection{
- background-color: rgba(207, 204, 204, 0.548);
+.signInUpSection {
+  background-color: rgba(207, 204, 204, 0.548);
 }
 
 /* .titleNav{
@@ -171,7 +205,7 @@ right: 3%;
 } */
 
 
-.containerForm{
+.containerForm {
   position: relative;
   background-color: rgba(255, 255, 255, 0.781);
   height: 110%;
@@ -180,59 +214,93 @@ right: 3%;
   margin-bottom: 70px;
 }
 
-.divider{
+.divider {
   width: 70%;
   background-color: #3f695b;
 }
 
 #signInForm {
- padding: 4% 6% 4% 6%;
+  padding: 4% 6% 4% 6%;
 }
 
 #user-pass {
- width: 100%;
+  width: 100%;
 }
-#btnDiv{
+
+#btnDiv {
   position: relative;
   padding-right: 10%;
 }
 
-#add{
+#add {
   visibility: show;
   padding: 1% 5% 1% 5%;
 }
 
-#textSign{
+#textSign {
   margin: 0;
   padding: 1% 1% 1% 1%;
   text-align: center;
 }
 
-#submitSignUp{
+#submitSignUp {
   margin: 0 0 5px 0;
   position: absolute;
   right: 16px;
 }
 
-.modal-body img{
+/* .modal-body img {
   border-radius: 0.3rem;
 }
 
-.modal-body{
+.modal-body {
   background-color: #3f695b;
-}
+} */
 
 @media screen and (max-width: 991px) {
   #signInLink {
-      position: inherit
+    position: inherit
   }
 
-  .navbar-dark .navbar-nav .nav-link{
-      font-weight: bold;
-      background-color: #3f695b;
+  .navbar-dark .navbar-nav .nav-link {
+    font-weight: bold;
+    background-color: #3f695b;
   }
 
-  #signInLink button{
-      color: white;
-  }    
+  #signInLink button {
+    color: white;
+  }
 }
+
+/* .well {
+  margin: 0px;
+}
+
+.well>* {
+  margin: 0px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.modal-visible {
+  display: block;
+}
+
+.modal-body {
+  width: 300px;
+  height: 200px;
+  background: #fff;
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
