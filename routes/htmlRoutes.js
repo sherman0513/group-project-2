@@ -25,16 +25,6 @@ var lat;
 var lng;
 
 module.exports = function(app) {
-  // Load index page
-  // app.get("/", function(req, res) {
-  //   db.Example.findAll({}).then(function(dbExamples) {
-  //     res.render("index", {
-  //       msg: "Welcome!",
-  //       examples: dbExamples
-  //     });
-  //   });
-  // });
-
   //Render list of users on UserList handlebar page
   app.get("/api/users", function(req, res) {
     db.Hiker.findAll({}).then(function(dbHikers) {
@@ -44,22 +34,6 @@ module.exports = function(app) {
       });
     });  
   });
-
-  // // Load example page and pass in an example by id
-  // app.get("/example/:id", function (req, res) {
-  //   db.Example.findOne({
-  //     where: {
-  //       id: req.params.id
-  //     }
-  //   }).then(function (
-  //     dbExample
-  //   ) {
-  //     res.render("example", {
-  //       example: dbExample
-  //     });
-  //   });
-  // });
-
   app.get("/trails", function(req, res) {
 
     axios
@@ -93,7 +67,6 @@ module.exports = function(app) {
           res.render("trails", {trails: data });
         });
  
-      //console.log(response.data.results[0].geometry.location.lat);
       //console.log(response.data.results[0].geometry.location.lng);
       })
  
@@ -122,14 +95,6 @@ module.exports = function(app) {
   app.get("/tips", function(req, res) {
     res.render("tips");
   });
- 
-  // app.post("/trails", function(req, res) {
-  //   res.render("trails");
-  // });
- 
-  /*   app.get("/trails", function(req, res) {
-    res.render("trails");
-  }); */
  
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {

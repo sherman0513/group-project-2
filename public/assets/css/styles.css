@@ -304,3 +304,156 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 } */
+
+
+#sectionC {
+  padding: 10rem 0;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+
+}
+
+#headingC {
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  letter-spacing: 3px;
+  margin-right: -3px;
+  margin-bottom: 4rem;
+  text-align: center;
+  color: #333;
+  position: relative;
+  font-family: "tillana", cursive;
+  background-color: lightblue;
+  width: 700px;
+}
+
+.blue-box-container {
+  text-align: center;
+}
+
+.blue-box{
+  display: inline-block;
+}
+
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+#cardA, #cardB, #cardC, #cardD {
+  width: 15rem;
+  background-color: #ebeef8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 1rem;
+  box-shadow: .5rem .5rem 3rem rgba(0,0,0,0.2);
+}
+
+#card-imgA, #card-imgB, #card-imgC, #card-imgD {
+  width: 15rem;
+  height: 20rem;
+  object-fit: cover;
+  margin: 6rem 10rem;
+}
+
+.profile-img {
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: -11rem;
+  z-index: 999;
+  border: 1rem solid #ebeef8;
+}
+
+.card h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 1.5rem 0;
+}
+
+.job-title {
+  color: #777;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.about {
+  font-size: 1.1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  text-align: center; 
+  color: #333;  
+  padding:20px;     
+}
+
+.social-media {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+  margin-top: 1.5rem; 
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.social-media i {
+  font-size: 3rem;
+  transition: color .5s;
+}
+
+.fa-linkedin {
+  color: #3b5999;
+}
+
+.fa-github-square {
+  color: black;
+}
+
+.fa-envelope {
+  color: black;
+} 
+
+
+.fa-linkedin:hover,
+.fa-github-square:hover,
+.fa-envelope:hover
+{
+  color: #45e19f;
+}
+
+@media screen and (min-width: 700px) {
+  .card-wrapper{
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+  }
+  .card{
+      margin: 2rem;
+  }
+}
+
+p {
+  font-size: 1.9rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img {
+  margin: 20px;
+  float: left;
+  width:170px;
+  height:170px;
+}
+
+.two {
+  float: right;
+}
