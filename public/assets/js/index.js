@@ -143,6 +143,14 @@ $(document).ready(function() {
     }
     console.log("I'm on line 143");
 
+    $(".bootstrap-tagsinput input").keydown(function(event) {
+      if (event.which === 13) {
+        $(this).blur();
+        $(this).focus();
+        return false;
+      }
+    });
+
     API.saveUser(user).then(function() {
       console.log("callback");
       // refreshForm();
