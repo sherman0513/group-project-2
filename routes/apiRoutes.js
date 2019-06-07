@@ -22,28 +22,13 @@ module.exports = function(app) {
   });
   //Get all favorite hikes
   app.get("/api/favehikes", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
+    db.SearchFav.findAll({}).then(function(dbExamples) {
       res.json(dbExamples);
     });
   });
-  // post route saving the parameters of an activity to the database
+
   app.post("/api/favehikes", function(req, res) {
-    db.SearchFav.create({
-      trailName: req.body.trailName,
-      type: req.body.type,
-      summary: req.body.summary,
-      difficulty: req.body.difficulty,
-      stars: req.body.stars,
-      location: req.bidy.location,
-      url: req.body.url,
-      image: req.body.image,
-      length: req.body.length,
-      longit: req.body.longit,
-      latit: req.body.latit,
-      conditionDetails: req.body.conditionDetails,
-      conditionStat: req.body.conditionStat,
-      searchedDate: req.body.searchedDate
-    })
+    db.SearchFav.create(req.body)
       .then(function(dbSearchFav) {
         res.json(dbSearchFav);
       })
@@ -51,4 +36,33 @@ module.exports = function(app) {
         res.send(err);
       });
   });
+
+  // post route saving the parameters of an activity to the database
+  // app.post("/api/favehikes", function(req, res) {
+  //   db.SearchFav.create(
+  //     {
+
+  // trailname: req.body.trailName,
+  // type: req.body.type,
+  // summary: req.body.summary,
+  // difficulty: req.body.difficulty,
+  // stars: req.body.stars,
+  // location: req.bidy.location,
+  // url: req.body.url,
+  // image: req.body.image,
+  // length: req.body.length,
+  // longit: req.body.longit,
+  // latit: req.body.latit,
+  // conditiondetails: req.body.conditionDetails,
+  // conditionstat: req.body.conditionStat,
+  // searcheddate: req.body.searchedDate,
+  // trailid: req.body.ID
+  // })
+  //   .then(function(dbSearchFav) {
+  //     res.json(dbSearchFav);
+  //   })
+  //   .catch(function(err) {
+  //     res.send(err);
+  //   });
+  //   });
 };
