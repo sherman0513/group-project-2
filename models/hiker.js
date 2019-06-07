@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 module.exports = function(sequelize, DataTypes) {
   var Hiker = sequelize.define("Hiker", {
-    fName: {
+    fname: {
       type: DataTypes.STRING,
       allowNull: true,
       validate: {
@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
 
-    lName: {
+    lname: {
       type: DataTypes.STRING,
       allowNull: true,
       validate: {
@@ -37,5 +37,10 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
+  Hiker.associate = function(models) {
+    Hiker.hasMany(models.SearchFav, {
+      onDelete: "cascade"
+    });
+  };
   return Hiker;
 };

@@ -5,7 +5,6 @@
 body {
   background-color: #a6c5a5;
   background-image: url("../images/action-adventure-alps-238622.jpg");
-  /* background-position-y: bottom; */
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -18,12 +17,10 @@ body {
 #nav {
   position: relative;
   height: 12%;
-  /* margin-bottom: 20px; */
 }
 
 #title {
   font-family: 'Tillana', cursive;
-  /* font-family: 'Merienda One', cursive; */
   font-size: 8vh;
   font-weight: bolder;
   text-align: center;
@@ -43,7 +40,6 @@ body {
 #navbarColor01 {
   position: absolute;
   width: 95%;
-  /* background-color: #3f695b; */
 }
 
 .clearfix::after {
@@ -59,7 +55,6 @@ body {
 
 .mainNavBar,
 #footer {
-  /* height: 7vh; */
   padding: 8px;
   z-index: 10;
   background-color: hsl(159, 22%, 25%);
@@ -113,25 +108,15 @@ body {
   z-index: 99;
 }
 
-.hikeSearch {
-  position: absolute;
-  width: 40%;
-  /* top: 60%; */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 99;
-  margin-top: 10%;
-}
-
-#locationInput {
+#locations {
   position: relative;
-  width: 85%;
+  margin: 120px 0px 0px 15px;
+  border: 3;
+
 }
 
-#searchLocation {
-  position: absolute;
-  right: 0;
-  margin-left: 5px;
+#searchLocation2 {
+  margin-left: 30px;
 }
 
 .card {
@@ -191,19 +176,11 @@ body {
   margin: 4px;
 }
 
-
-
 /* Sign In/Up Section  */
 
 .signInUpSection {
   background-color: rgba(207, 204, 204, 0.548);
 }
-
-/* .titleNav{
-  position: absolute;
-  left: 47%;
-} */
-
 
 .containerForm {
   position: relative;
@@ -249,14 +226,6 @@ body {
   right: 16px;
 }
 
-/* .modal-body img {
-  border-radius: 0.3rem;
-}
-
-.modal-body {
-  background-color: #3f695b;
-} */
-
 @media screen and (max-width: 991px) {
   #signInLink {
     position: inherit
@@ -272,35 +241,169 @@ body {
   }
 }
 
-/* .well {
-  margin: 0px;
+/* 308 =========== this is christen stuff  ============================ */
+
+#sectionC {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+
 }
 
-.well>* {
-  margin: 0px;
+#headingC {
+  font-size: 3rem;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-align: center;
+  color: #333;
+  position: relative;
+  font-family: "tillana", cursive;
+  width: 600px;
 }
 
-.modal {
-  display: none;
-  position: fixed;
+.blue-box-container {
+  text-align: center;
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background-color: #a6c5a5;
 }
 
-.modal-visible {
-  display: block;
+.blue-box {
+  display: inline-block;
+  text-align: left;
+  padding: 25px;
 }
 
-.modal-body {
-  width: 300px;
-  height: 200px;
-  background: #fff;
-  padding: 20px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  width: auto;
+  justify-content: center;
+  background-color: #a6c5a5;
+}
+
+.cardC {
+  width: 19rem;
+  background-color: #ebeef8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: .5rem .5rem;
+  height: 36rem;
+}
+
+#card-imgA,
+#card-imgB,
+#card-imgC,
+#card-imgD {
+  width: 15rem;
+  height: 20rem;
+  object-fit: cover;
+  margin: 6rem 10rem;
+}
+
+.profile-img {
+  width: 12rem;
+  height: 13rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: -11rem;
+  z-index: 999;
+  border: .5rem solid #ebeef8;
+}
+
+.cardC h1 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0 .5rem;
+  text-align: center;
+}
+
+.job-title {
+  color: #777;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.about {
+  font-size: 1.1rem;
+  margin: 0;
+  font-style: italic;
+  text-align: center;
+  color: #333;
+  padding: 14px;
+  height: 230px;
+}
+
+.social-media {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: .25rem 0;
+  margin-top: .25rem; 
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.social-media i {
+  font-size: .5rem;
+  transition: color .5s;
+}
+
+.fa-linkedin {
+  color: #3b5999;
+}
+
+.fa-github-square {
+  color: black;
+}
+
+.fa-envelope {
+  color: black;
+}
+
+
+.fa-linkedin:hover,
+.fa-github-square:hover,
+.fa-envelope:hover {
+  color: #45e19f;
+}
+
+@media screen and (min-width: 700px) {
+  .card-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cardC {
+    margin: 1rem;
+  }
+}
+
+/* p {
+  font-size: 1.9rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 } */
+
+.imgC {
+  margin: 20px 10px 10px 10px;
+  float: left;
+  width: 170px;
+  height: 170px;
+}
+
+.two {
+  float: right;
+}
+
+.fab {
+  
+
+}
