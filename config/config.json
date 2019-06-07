@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Clark1472",
+    "password": "password",
     "database": "hikingTrekdb",
     "host": "localhost",
     "dialect": "mysql",
