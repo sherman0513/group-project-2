@@ -14,6 +14,7 @@
                <img src={{imgSmallMed}} alt="Smiley face" width="280px" height="200px" style="border:solid">
 
             </div>
+          
             <div id="hikeTitle" class="col-sm-5">
                <header id="hikeName">
                   <h3><span id="hikeName">{{{name}}}</span></h3>
@@ -24,7 +25,7 @@
                   <h6>{{summary}}</h6>
                </div>
                <br>
-               <button type="button" class="btn btn-info btn-saveTrail" data-trailname="{{name}}"
+               <button type="button" class="btn btn-info btn-saveTrail" data-toggle="modal" data-trailname="{{name}}"
                   data-myval="{{ this.id}}" data-type="{{type}}" data-summary="{{summary}}"
                   data-difficulty="{{difficulty}}" data-stars="{{stars}}" data-location="{{location}}"
                   data-url="{{url}}" data-image="{{imgMedium}}" data-length="{{length}}" data-longit="{{longitude}}"
@@ -39,25 +40,20 @@
                <h5 style="font-style: italic"> Difficulty: {{difficulty}}</h5>
                <p id="stars">STARS: {{stars}}</p>
                <br>
+               <br>
                <h5 style="font-style: italic"><strong><a href="{{url}}" target="_blank">More Info </a></strong></h5>
 
             </div>
-
          </div>
       </div>
-
    </div>
 
-
-
-   {{!-- <br> --}}
-
-
    {{/each}}
+
 </ul>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/assets/js/index.js"></script>
-{{!-- <script src="/assets/js/modal.js"></script> --}}
 
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+<script src="/assets/js/index.js"></script>

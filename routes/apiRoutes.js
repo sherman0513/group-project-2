@@ -37,6 +37,22 @@ module.exports = function(app) {
       });
   });
 
+  // app.get("/api/searchfavs", function(req, res) {
+  //   db.SearchFav.findAll({})
+  //     .then(function(hikers) {
+  //       res.render("faves", {
+  //         hikers: hikers,
+  //         trailname: trailname,
+  //         location: location,
+  //         length: length,
+  //         stars: stars
+  //       });
+  //     })
+  //     .catch(function(err) {
+  //       res.send(err);
+  //     });
+  // });
+
   // post route saving the parameters of an activity to the database
   // app.post("/api/favehikes", function(req, res) {
   //   db.SearchFav.create(
