@@ -111,10 +111,15 @@ body {
   z-index: 99;
 }
 
-#locations{
- position: relative;
-  margin-top: 40px;
- 
+#locations {
+  position: relative;
+  margin: 120px 0px 0px 15px;
+  border: 3;
+
+}
+
+#searchLocation2{
+  margin-left: 30px;
 }
 
 .card {
@@ -268,7 +273,7 @@ body {
   text-align: center;
 }
 
-.blue-box{
+.blue-box {
   display: inline-block;
 }
 
@@ -279,7 +284,10 @@ body {
   flex-direction: column;
 }
 
-#cardA, #cardB, #cardC, #cardD {
+#cardA,
+#cardB,
+#cardC,
+#cardD {
   width: 15rem;
   background-color: #ebeef8;
   display: flex;
@@ -287,10 +295,13 @@ body {
   align-items: center;
   justify-content: center;
   margin: 1rem 1rem;
-  box-shadow: .5rem .5rem 3rem rgba(0,0,0,0.2);
+  box-shadow: .5rem .5rem 3rem rgba(0, 0, 0, 0.2);
 }
 
-#card-imgA, #card-imgB, #card-imgC, #card-imgD {
+#card-imgA,
+#card-imgB,
+#card-imgC,
+#card-imgD {
   width: 15rem;
   height: 20rem;
   object-fit: cover;
@@ -323,9 +334,9 @@ body {
   font-size: 1.1rem;
   margin: 1.5rem 0;
   font-style: italic;
-  text-align: center; 
-  color: #333;  
-  padding:20px;     
+  text-align: center;
+  color: #333;
+  padding: 20px;
 }
 
 .social-media {
@@ -334,8 +345,8 @@ body {
   display: flex;
   justify-content: space-evenly;
   padding: 2rem 0;
-  margin-top: 1.5rem; 
-  border-top: 1px solid rgba(0,0,0,0.1);
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .social-media i {
@@ -353,25 +364,25 @@ body {
 
 .fa-envelope {
   color: black;
-} 
+}
 
 
 .fa-linkedin:hover,
 .fa-github-square:hover,
-.fa-envelope:hover
-{
+.fa-envelope:hover {
   color: #45e19f;
 }
 
 @media screen and (min-width: 700px) {
-  .card-wrapper{
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
+  .card-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
-  .card{
-      margin: 2rem;
+
+  .card {
+    margin: 2rem;
   }
 }
 
