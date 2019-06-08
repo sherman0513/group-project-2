@@ -48,9 +48,9 @@ if (process.env.NODE_ENV === "development") {
 
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function() {
-  // app.get("/", (req, res) => {
-  //   res.send(process.env.SECRET_KEY);
-  // })
+  app.get("/", (req, res) => {
+    res.send(process.env.SECRET_KEY);
+  })
 
   app.listen(PORT, function() {
     console.log(

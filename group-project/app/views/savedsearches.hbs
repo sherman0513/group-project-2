@@ -1,0 +1,26 @@
+<ul id="trailBg">
+    <ul id="example-list" class="list-group">
+        {{#each faves}}
+        <li data-id="{{this.id}}" class="list-group-item" style="background-color:#919b91; opacity: .90; border: solid">
+            <div class="row">
+                <div class="col-5">
+                    <h5 style="margin-top:25px"><span> Trail Name :</span>"{{this.trailname}}"</h5>
+                </div> <!-- 25% -->
+                <div class="col-5">
+                    <h5 style="margin-top:25px"><span>Location :</span> "{{this.location}}"</h5>
+                </div> <!-- 75% -->
+                <div class="col-2"> <img src={{image}} alt="Smiley face" width="180px" height="100px"
+                        style="border:solid">
+
+                </div> <!-- 75% -->
+            </div>
+        </li>
+        <br>
+
+        {{/each}}
+    </ul>
+</ul>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/public/assets/js/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
