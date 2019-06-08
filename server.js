@@ -1,64 +1,64 @@
-require("dotenv").config();
-var express = require("express");
-var exphbs = require("express-handlebars");
+require('dotenv').config()
+var express = require('express')
+var app = express()
+var passport = require('passport')
+var session = require('express-session')
+var bodyParser = require('body-parser')
+var env = require('dotenv').load()
+var exphbs = require('express-handlebars')
+var env = require('dotenv');
 
-var db = require("./models");
+//For BodyParser
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use(bodyParser.json());
+app.use(express.static(__dirname + "/app"));
 
-var app = express();
-var PORT = process.env.PORT || 8080;
+// For Passport
+app.use(session({
+    secret: 'keyboard cat',
+    resave: true,
+    saveUninitialized: true
+})); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
 
-// Middleware
-app.use(
-  express.urlencoded({
-    extended: false
-  })
-);
-app.use(express.json());
-app.use(express.static("public"));
+//For Handlebars
+app.set('views', './app/views')
+app.engine('hbs', exphbs({
+    extname: '.hbs'
+}));
+app.set('view engine', '.hbs');
 
-// assemble is a descendant of `templates`
-// var app = assemble();
-// app.engine('hbs', require('engine-handlebars'));
-
-// // engines like handlebars can handle a helper name with dashes
-// app.helper('link-to', require('helper-link-to'));
-
-// Handlebars
-app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main"
-  })
-);
-app.set("view engine", "handlebars");
-
-// Routes
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
-
-var syncOptions = {
-  force: false
-};
-
-// If running a test, set syncOptions.force to true
-// clearing the `testdb`
-if (process.env.NODE_ENV === "development") {
-  syncOptions.force = true;
-}
-
-// Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function() {
-  app.get("/", (req, res) => {
-    res.send(process.env.SECRET_KEY);
-  })
-
-  app.listen(PORT, function() {
-    console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      PORT
-    );
-  });
+app.get('/', function (req, res) {
+    res.render('index');
 });
 
-module.exports = app;
+//Models
+var models = require("./app/models");
+
+//Routes
+var authRoute = require('./app/routes/auth.js')(app, passport);
+require("./app/routes/htmlRoutes")(app);
+require("./app/routes/apiRoutes")(app);
+
+//load passport strategies
+require('./app/config/passport/passport.js')(passport, models.user);
+
+//Sync Database
+models.sequelize.sync().then(function () {
+    app.get("/", (req, res) => {
+        res.send(process.env.SECRET_KEY);
+    })
+
+    console.log('Nice! Database looks fine')
+}).catch(function (err) {
+    console.log(err, "Something went wrong with the Database Update!")
+});
+
+app.listen(5000, function (err) {
+    if (!err)
+        console.log("Site is live");
+    else console.log(err)
+});

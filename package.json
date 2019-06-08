@@ -1,19 +1,28 @@
 {
-  "name": "group-project-2",
+  "name": "passport",
   "version": "1.0.0",
-  "description": "Project 2 Starter",
-  "main": "server.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "lint": "eslint --quiet .",
-    "fix": "eslint --fix .",
-    "test": "cross-env NODE_ENV=test mocha -u tdd --reporter spec --exit"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.6.2",
-    "mocha": "^5.2.0",
-    "prettier": "^1.13.7"
+    "axios": "^0.19.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.16.1",
+    "keys": "^0.1.2",
+    "mysql": "^2.17.1",
+    "mysql2": "^1.6.4",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "request": "^2.88.0",
+    "sequelize": "^4.44.0"
   }
 }
