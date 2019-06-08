@@ -5,7 +5,7 @@ var passport = require('passport')
 var session = require('express-session')
 var bodyParser = require('body-parser')
 var exphbs = require('express-handlebars')
-
+var PORT = process.env.PORT || 5000
 
 //For BodyParser
 app.use(bodyParser.urlencoded({
@@ -53,7 +53,7 @@ models.sequelize.sync().then(function () {
         res.send(process.env.SECRET_KEY);
     });
 
-    app.listen(5000, function (err) {
+    app.listen(PORT, function (err) {
         if (!err)
             console.log("Site is live");
         else console.log(err)
