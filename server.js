@@ -45,19 +45,23 @@ require("./app/routes/apiroutes")(app);
 //load passport strategies
 require('./app/config/passport/passport.js')(passport, models.user);
 
+console.log(process.env.NODE_ENV);
 //Sync Database
 models.sequelize.sync().then(function () {
+
     app.get("/", (req, res) => {
         res.send(process.env.SECRET_KEY);
-    })
+    });
+
+    app.listen(5000, function (err) {
+        if (!err)
+            console.log("Site is live");
+        else console.log(err)
+    });
 
     console.log('Nice! Database looks fine')
 }).catch(function (err) {
     console.log(err, "Something went wrong with the Database Update!")
 });
 
-app.listen(5000, function (err) {
-    if (!err)
-        console.log("Site is live");
-    else console.log(err)
-});
+
