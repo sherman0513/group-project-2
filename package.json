@@ -1,5 +1,7 @@
 {
   "name": "mysql-sequelize-heroku",
+  "version": "1.0.0",
+  "description": "Project 2 Starter",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
