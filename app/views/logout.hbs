@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+
+
+        <form class="hikeSearch" method="get">
+            <div class="form">
+                <h2>
+                    <div class="row">
+                        <input type="text" class="form-control mb-2" id="locationInput" placeholder="Location">
+                        <div class="invalid-feedback">
+                            Please enter a location.
+                        </div>
+                        {{!-- <button type="submit" class="btn btn-primary" id="searchLocation">Search</button> --}}
+                        <a href="/trails" class="btn btn-primary" id="searchLocation" role="button"
+                            aria-pressed="true">Search</a>
+                        <br>
+                        {{!-- <button id="test"></button> --}}
+                    </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card-footer text-white footer" id="footer">
+    <p class="footer-text"> &copy; 2019 by Group JMAC. All rights reserved. </p>
+</div>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/public/assets/js/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>

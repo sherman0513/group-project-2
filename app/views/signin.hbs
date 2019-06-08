@@ -1,0 +1,29 @@
+<div class="container containerForm">
+    <p id="textSign"> <strong>Welcome Back Hiker!</strong> </p>
+    <form id="signin" name="signin" method="post" action="signin">
+        <div class="row">
+            <div class="form-group col-sm-12">
+                {{!-- <label for="inputName" class="control-label">Name</label> --}}
+                <input type="text" class="form-control" name="email" placeholder="Email" required />
+            </div>
+        </div>
+        {{!-- <div class="form-inline"> --}}
+        <div class="row">
+            <div class="form-group col-sm-8">
+                <!-- <label for="user-pass">Password</label> -->
+                <input name="password" type="password" class="form-control" id="user-pass" placeholder="Password"
+                    required />
+            </div>
+            <div class="form-group col-sm-2" id="btnDiv">
+                <button href="/signin" class="btn btn-primary" role="button" aria-pressed="true">Sign In</button>
+            </div>
+            <div class="form-group col-sm-2" id="btnDiv">
+                <a href="/signup" class="btn btn-primary" role="button" aria-pressed="true">Register</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/public/assets/js/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
