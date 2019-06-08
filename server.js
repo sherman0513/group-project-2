@@ -4,9 +4,8 @@ var app = express()
 var passport = require('passport')
 var session = require('express-session')
 var bodyParser = require('body-parser')
-var env = require('dotenv').load()
 var exphbs = require('express-handlebars')
-var env = require('dotenv');
+
 
 //For BodyParser
 app.use(bodyParser.urlencoded({
