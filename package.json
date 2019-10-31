@@ -25,7 +25,7 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "request": "^2.88.0",
-    "sequelize": "^4.44.0",
+    "sequelize": "^5.15.1",
     "test": "^0.6.0",
     "travis-ci": "^2.2.0"
   }
