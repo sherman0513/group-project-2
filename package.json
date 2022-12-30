@@ -19,7 +19,7 @@
     "express-handlebars": "^3.0.0",
     "express-session": "^1.16.1",
     "keys": "^0.1.2",
-    "mocha": "^6.1.4",
+    "mocha": "^10.2.0",
     "mysql": "^2.17.1",
     "mysql2": "^1.6.4",
     "passport": "^0.4.0",
